@@ -4,6 +4,27 @@
 
 [node name="Root" type="Node"]
 
-[node name="AllSmiles" type="Sprite2D" parent="."]
-position = Vector2(94, 46)
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+scale = Vector2(5, 5)
+
+[node name="AllSmiles" type="Sprite2D" parent="CanvasGroup"]
+texture_filter = 1
+position = Vector2(4, 4)
+texture = ExtResource("1_jl64g")
+
+[node name="AllSmiles2" type="Sprite2D" parent="CanvasGroup"]
+texture_filter = 1
+position = Vector2(252, 4)
+texture = ExtResource("1_jl64g")
+
+[node name="AllSmiles3" type="Sprite2D" parent="CanvasGroup"]
+texture_filter = 1
+position = Vector2(4, 188)
+scale = Vector2(1, 1)
+texture = ExtResource("1_jl64g")
+
+[node name="AllSmiles4" type="Sprite2D" parent="CanvasGroup"]
+texture_filter = 1
+position = Vector2(252, 188)
+scale = Vector2(1, 1)
 texture = ExtResource("1_jl64g")
