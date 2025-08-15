@@ -7,7 +7,6 @@
 
 [node name="PixelPerfectScreenScaling" type="CanvasGroup" parent="."]
 unique_name_in_owner = true
-scale = Vector2(5, 5)
 script = ExtResource("1_q7g6o")
 
 [node name="AllSmiles" type="Sprite2D" parent="PixelPerfectScreenScaling"]
