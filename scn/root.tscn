@@ -1,30 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsm2hommt5155"]
+[gd_scene load_steps=3 format=3 uid="uid://bsm2hommt5155"]
 
 [ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_jl64g"]
+[ext_resource type="Script" uid="uid://eqtib3unypow" path="res://scn/pixel_perfect_screen_scaling.gd" id="1_q7g6o"]
 
 [node name="Root" type="Node"]
 
-[node name="CanvasGroup" type="CanvasGroup" parent="."]
+[node name="PixelPerfectScreenScaling" type="CanvasGroup" parent="."]
+unique_name_in_owner = true
 scale = Vector2(5, 5)
+script = ExtResource("1_q7g6o")
 
-[node name="AllSmiles" type="Sprite2D" parent="CanvasGroup"]
+[node name="AllSmiles" type="Sprite2D" parent="PixelPerfectScreenScaling"]
 texture_filter = 1
 position = Vector2(4, 4)
 texture = ExtResource("1_jl64g")
 
-[node name="AllSmiles2" type="Sprite2D" parent="CanvasGroup"]
+[node name="AllSmiles2" type="Sprite2D" parent="PixelPerfectScreenScaling"]
 texture_filter = 1
 position = Vector2(252, 4)
 texture = ExtResource("1_jl64g")
 
-[node name="AllSmiles3" type="Sprite2D" parent="CanvasGroup"]
+[node name="AllSmiles3" type="Sprite2D" parent="PixelPerfectScreenScaling"]
 texture_filter = 1
 position = Vector2(4, 188)
-scale = Vector2(1, 1)
 texture = ExtResource("1_jl64g")
 
-[node name="AllSmiles4" type="Sprite2D" parent="CanvasGroup"]
+[node name="AllSmiles4" type="Sprite2D" parent="PixelPerfectScreenScaling"]
 texture_filter = 1
 position = Vector2(252, 188)
-scale = Vector2(1, 1)
 texture = ExtResource("1_jl64g")
