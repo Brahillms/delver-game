@@ -2,7 +2,7 @@ extends CanvasGroup
 
 # Deisgned to expand the game's internal small, fixed resolution for screens with much higher resolutions
 
-@export var pixel_perfect_scale_factor: int = 1:
+var pixel_perfect_scale_factor: int = 1:
 	set(value):
 		pixel_perfect_scale_factor = value
 		_set_pixel_perfect_size()
