@@ -69,5 +69,101 @@ collision_mask = 0
 [node name="GroundHitbox" type="CollisionShape2D" parent="PixelPerfectScreenScaling/Ground3/GroundManager"]
 shape = SubResource("RectangleShape2D_q7g6o")
 
+[node name="Ground4" type="Sprite2D" parent="PixelPerfectScreenScaling"]
+texture_filter = 1
+position = Vector2(116, 132)
+texture = ExtResource("1_jl64g")
+
+[node name="GroundManager" type="StaticBody2D" parent="PixelPerfectScreenScaling/Ground4"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="GroundHitbox" type="CollisionShape2D" parent="PixelPerfectScreenScaling/Ground4/GroundManager"]
+shape = SubResource("RectangleShape2D_q7g6o")
+
+[node name="Ground5" type="Sprite2D" parent="PixelPerfectScreenScaling"]
+texture_filter = 1
+position = Vector2(124, 132)
+texture = ExtResource("1_jl64g")
+
+[node name="GroundManager" type="StaticBody2D" parent="PixelPerfectScreenScaling/Ground5"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="GroundHitbox" type="CollisionShape2D" parent="PixelPerfectScreenScaling/Ground5/GroundManager"]
+shape = SubResource("RectangleShape2D_q7g6o")
+
+[node name="Ground6" type="Sprite2D" parent="PixelPerfectScreenScaling"]
+texture_filter = 1
+position = Vector2(132, 132)
+texture = ExtResource("1_jl64g")
+
+[node name="GroundManager" type="StaticBody2D" parent="PixelPerfectScreenScaling/Ground6"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="GroundHitbox" type="CollisionShape2D" parent="PixelPerfectScreenScaling/Ground6/GroundManager"]
+shape = SubResource("RectangleShape2D_q7g6o")
+
+[node name="Ground7" type="Sprite2D" parent="PixelPerfectScreenScaling"]
+texture_filter = 1
+position = Vector2(140, 132)
+texture = ExtResource("1_jl64g")
+
+[node name="GroundManager" type="StaticBody2D" parent="PixelPerfectScreenScaling/Ground7"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="GroundHitbox" type="CollisionShape2D" parent="PixelPerfectScreenScaling/Ground7/GroundManager"]
+shape = SubResource("RectangleShape2D_q7g6o")
+
+[node name="Ground8" type="Sprite2D" parent="PixelPerfectScreenScaling"]
+texture_filter = 1
+position = Vector2(148, 132)
+texture = ExtResource("1_jl64g")
+
+[node name="GroundManager" type="StaticBody2D" parent="PixelPerfectScreenScaling/Ground8"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="GroundHitbox" type="CollisionShape2D" parent="PixelPerfectScreenScaling/Ground8/GroundManager"]
+shape = SubResource("RectangleShape2D_q7g6o")
+
+[node name="Ground9" type="Sprite2D" parent="PixelPerfectScreenScaling"]
+texture_filter = 1
+position = Vector2(156, 132)
+texture = ExtResource("1_jl64g")
+
+[node name="GroundManager" type="StaticBody2D" parent="PixelPerfectScreenScaling/Ground9"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="GroundHitbox" type="CollisionShape2D" parent="PixelPerfectScreenScaling/Ground9/GroundManager"]
+shape = SubResource("RectangleShape2D_q7g6o")
+
+[node name="Ground10" type="Sprite2D" parent="PixelPerfectScreenScaling"]
+texture_filter = 1
+position = Vector2(156, 124)
+texture = ExtResource("1_jl64g")
+
+[node name="GroundManager" type="StaticBody2D" parent="PixelPerfectScreenScaling/Ground10"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="GroundHitbox" type="CollisionShape2D" parent="PixelPerfectScreenScaling/Ground10/GroundManager"]
+shape = SubResource("RectangleShape2D_q7g6o")
+
+[node name="Ground11" type="Sprite2D" parent="PixelPerfectScreenScaling"]
+texture_filter = 1
+position = Vector2(156, 116)
+texture = ExtResource("1_jl64g")
+
+[node name="GroundManager" type="StaticBody2D" parent="PixelPerfectScreenScaling/Ground11"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="GroundHitbox" type="CollisionShape2D" parent="PixelPerfectScreenScaling/Ground11/GroundManager"]
+shape = SubResource("RectangleShape2D_q7g6o")
+
 [node name="Player" parent="PixelPerfectScreenScaling" instance=ExtResource("3_c2doo")]
 position = Vector2(100, 20)
