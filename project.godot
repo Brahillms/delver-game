@@ -14,7 +14,6 @@ config/name="Delver"
 run/main_scene="uid://bsm2hommt5155"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 run/max_fps=30
-config/icon="res://icon.svg"
 
 [display]
 
