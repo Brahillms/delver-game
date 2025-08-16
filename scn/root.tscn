@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsm2hommt5155"]
+[gd_scene load_steps=5 format=3 uid="uid://bsm2hommt5155"]
 
 [ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_jl64g"]
 [ext_resource type="Script" uid="uid://eqtib3unypow" path="res://scn/pixel_perfect_screen_scaling.gd" id="1_q7g6o"]
+[ext_resource type="PackedScene" uid="uid://14xlif05ojdb" path="res://scn/player.tscn" id="3_c2doo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7g6o"]
+size = Vector2(8, 8)
 
 [node name="Root" type="Node"]
 
@@ -28,3 +32,42 @@ texture = ExtResource("1_jl64g")
 texture_filter = 1
 position = Vector2(252, 188)
 texture = ExtResource("1_jl64g")
+
+[node name="Ground" type="Sprite2D" parent="PixelPerfectScreenScaling"]
+texture_filter = 1
+position = Vector2(92, 132)
+texture = ExtResource("1_jl64g")
+
+[node name="GroundManager" type="StaticBody2D" parent="PixelPerfectScreenScaling/Ground"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="GroundHitbox" type="CollisionShape2D" parent="PixelPerfectScreenScaling/Ground/GroundManager"]
+shape = SubResource("RectangleShape2D_q7g6o")
+
+[node name="Ground2" type="Sprite2D" parent="PixelPerfectScreenScaling"]
+texture_filter = 1
+position = Vector2(100, 132)
+texture = ExtResource("1_jl64g")
+
+[node name="GroundManager" type="StaticBody2D" parent="PixelPerfectScreenScaling/Ground2"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="GroundHitbox" type="CollisionShape2D" parent="PixelPerfectScreenScaling/Ground2/GroundManager"]
+shape = SubResource("RectangleShape2D_q7g6o")
+
+[node name="Ground3" type="Sprite2D" parent="PixelPerfectScreenScaling"]
+texture_filter = 1
+position = Vector2(108, 132)
+texture = ExtResource("1_jl64g")
+
+[node name="GroundManager" type="StaticBody2D" parent="PixelPerfectScreenScaling/Ground3"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="GroundHitbox" type="CollisionShape2D" parent="PixelPerfectScreenScaling/Ground3/GroundManager"]
+shape = SubResource("RectangleShape2D_q7g6o")
+
+[node name="Player" parent="PixelPerfectScreenScaling" instance=ExtResource("3_c2doo")]
+position = Vector2(100, 20)

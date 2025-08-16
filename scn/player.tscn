@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://14xlif05ojdb"]
+[gd_scene load_steps=6 format=3 uid="uid://14xlif05ojdb"]
 
 [ext_resource type="Texture2D" uid="uid://ddosm1gfpu1n0" path="res://spr/hitbox.webp" id="1_386vx"]
+[ext_resource type="Script" uid="uid://cvmx2b5f4vbbm" path="res://scn/player_move.gd" id="2_diy2p"]
 [ext_resource type="Texture2D" uid="uid://b36yjlhji3ppp" path="res://spr/hurtbox.webp" id="2_dltx8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dltx8"]
@@ -10,22 +11,26 @@ size = Vector2(8, 16)
 size = Vector2(6, 14)
 
 [node name="Player" type="Node2D"]
-texture_filter = 1
 
-[node name="PlayerHitbox" type="Sprite2D" parent="."]
+[node name="HitboxManager" type="CharacterBody2D" parent="."]
+collision_mask = 2
+script = ExtResource("2_diy2p")
+
+[node name="PlayerHitbox" type="Sprite2D" parent="HitboxManager"]
+texture_filter = 1
 texture = ExtResource("1_386vx")
 
-[node name="HitboxManager" type="CharacterBody2D" parent="PlayerHitbox"]
-
-[node name="HitboxCollider" type="CollisionShape2D" parent="PlayerHitbox/HitboxManager"]
+[node name="HitboxCollider" type="CollisionShape2D" parent="HitboxManager"]
 shape = SubResource("RectangleShape2D_dltx8")
 debug_color = Color(0, 1, 0, 0.215686)
 
-[node name="PlayerHurtbox" type="Sprite2D" parent="."]
+[node name="HurtboxManager" type="CharacterBody2D" parent="HitboxManager"]
+collision_mask = 4
+
+[node name="PlayerHurtbox" type="Sprite2D" parent="HitboxManager/HurtboxManager"]
+texture_filter = 1
 texture = ExtResource("2_dltx8")
 
-[node name="HurtboxManager" type="CharacterBody2D" parent="PlayerHurtbox"]
-
-[node name="HurtboxCollider" type="CollisionShape2D" parent="PlayerHurtbox/HurtboxManager"]
+[node name="HurtboxCollider" type="CollisionShape2D" parent="HitboxManager/HurtboxManager"]
 shape = SubResource("RectangleShape2D_diy2p")
 debug_color = Color(1, 0, 0, 0.215686)
