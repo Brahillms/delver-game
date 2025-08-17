@@ -19,6 +19,8 @@ run/max_fps=30
 
 window/size/viewport_width=256
 window/size/viewport_height=192
+window/size/resizable=false
+window/stretch/scale_mode="integer"
 window/vsync/vsync_mode=0
 
 [input]
