@@ -6,12 +6,11 @@
 size = Vector2(8, 8)
 
 [node name="TestTileSolid" type="Sprite2D"]
-texture_filter = 1
 texture = ExtResource("1_n8thv")
 
-[node name="TestTileManager" type="StaticBody2D" parent="."]
+[node name="TestTileSolidManager" type="StaticBody2D" parent="."]
 collision_layer = 2
 collision_mask = 0
 
-[node name="TestTileHitbox" type="CollisionShape2D" parent="TestTileManager"]
+[node name="TestTileSolidHitbox" type="CollisionShape2D" parent="TestTileSolidManager"]
 shape = SubResource("RectangleShape2D_q7g6o")

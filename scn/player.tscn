@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://14xlif05ojdb"]
+[gd_scene load_steps=7 format=3 uid="uid://14xlif05ojdb"]
 
 [ext_resource type="Texture2D" uid="uid://ddosm1gfpu1n0" path="res://spr/hitbox.webp" id="1_386vx"]
 [ext_resource type="Script" uid="uid://dci3sn0tbol17" path="res://scn/player_move.gd" id="2_diy2p"]
 [ext_resource type="Texture2D" uid="uid://b36yjlhji3ppp" path="res://spr/hurtbox.webp" id="2_dltx8"]
+[ext_resource type="Script" uid="uid://w8sxdsebhba2" path="res://scn/hurt.gd" id="3_eoiiq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dltx8"]
 size = Vector2(8, 16)
@@ -17,18 +18,17 @@ collision_mask = 2
 script = ExtResource("2_diy2p")
 
 [node name="PlayerHitbox" type="Sprite2D" parent="HitboxManager"]
-texture_filter = 1
 texture = ExtResource("1_386vx")
 
 [node name="HitboxCollider" type="CollisionShape2D" parent="HitboxManager"]
 shape = SubResource("RectangleShape2D_dltx8")
 debug_color = Color(0, 1, 0, 0.215686)
 
-[node name="HurtboxManager" type="CharacterBody2D" parent="HitboxManager"]
+[node name="HurtboxManager" type="Area2D" parent="HitboxManager"]
 collision_mask = 4
+script = ExtResource("3_eoiiq")
 
 [node name="PlayerHurtbox" type="Sprite2D" parent="HitboxManager/HurtboxManager"]
-texture_filter = 1
 texture = ExtResource("2_dltx8")
 
 [node name="HurtboxCollider" type="CollisionShape2D" parent="HitboxManager/HurtboxManager"]
@@ -45,5 +45,6 @@ unique_name_in_owner = true
 wait_time = 0.15
 one_shot = true
 
+[connection signal="area_entered" from="HitboxManager/HurtboxManager" to="HitboxManager/HurtboxManager" method="_on_area_entered"]
 [connection signal="timeout" from="TimerWJ" to="HitboxManager" method="_on_timer_wj_timeout"]
 [connection signal="timeout" from="TimerCoyote" to="HitboxManager" method="_on_timer_coyote_timeout"]
