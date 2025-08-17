@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://14xlif05ojdb"]
 
 [ext_resource type="Texture2D" uid="uid://ddosm1gfpu1n0" path="res://spr/hitbox.webp" id="1_386vx"]
-[ext_resource type="Script" uid="uid://cvmx2b5f4vbbm" path="res://scn/player_move.gd" id="2_diy2p"]
+[ext_resource type="Script" uid="uid://dci3sn0tbol17" path="res://scn/player_move.gd" id="2_diy2p"]
 [ext_resource type="Texture2D" uid="uid://b36yjlhji3ppp" path="res://spr/hurtbox.webp" id="2_dltx8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dltx8"]
@@ -34,3 +34,16 @@ texture = ExtResource("2_dltx8")
 [node name="HurtboxCollider" type="CollisionShape2D" parent="HitboxManager/HurtboxManager"]
 shape = SubResource("RectangleShape2D_diy2p")
 debug_color = Color(1, 0, 0, 0.215686)
+
+[node name="TimerWJ" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.25
+one_shot = true
+
+[node name="TimerCoyote" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.15
+one_shot = true
+
+[connection signal="timeout" from="TimerWJ" to="HitboxManager" method="_on_timer_wj_timeout"]
+[connection signal="timeout" from="TimerCoyote" to="HitboxManager" method="_on_timer_coyote_timeout"]

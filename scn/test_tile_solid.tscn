@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://br0clvl43ea17"]
+
+[ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_n8thv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7g6o"]
+size = Vector2(8, 8)
+
+[node name="TestTileSolid" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_n8thv")
+
+[node name="TestTileManager" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="TestTileHitbox" type="CollisionShape2D" parent="TestTileManager"]
+shape = SubResource("RectangleShape2D_q7g6o")
