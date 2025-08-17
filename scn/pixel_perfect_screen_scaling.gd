@@ -22,7 +22,7 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("inc_screen_scale"):
 		if scale_factor <= 5:
 			scale_factor += 1
-	
+
 	if Input.is_action_just_pressed("dec_screen_scale"):
 		if scale_factor >= 2:
 			scale_factor -= 1
