@@ -3,16 +3,14 @@ extends CharacterBody2D
 
 
 const JUMP_VELOCITY: float = -270.0
+const SPEED: float = 80.0
 
 
-var speed: float
 var perform_wall_jump: bool = false
 var perform_coyote_jump: bool = false
 
 
 @onready var pixel_perfect = get_node("../..")
-
-
 
 
 func player_jump() -> void:
@@ -37,9 +35,9 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("ui_left", "ui_right")
 
 	if direction and not perform_wall_jump:
-		velocity.x = (direction * speed) * pixel_perfect.scale_factor
+		velocity.x = (direction * SPEED) * pixel_perfect.scale_factor
 	elif not perform_wall_jump:
-		velocity.x = move_toward(velocity.x, 0, speed)
+		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	# Wall jumping
 	if (
@@ -48,7 +46,7 @@ func _physics_process(delta: float) -> void:
 		and Input.is_action_just_pressed("ui_accept")
 	):
 		velocity = Vector2(
-			(get_wall_normal().x * speed) * pixel_perfect.scale_factor,
+			(get_wall_normal().x * SPEED) * pixel_perfect.scale_factor,
 			JUMP_VELOCITY * pixel_perfect.scale_factor
 			)
 
