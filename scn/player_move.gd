@@ -13,13 +13,7 @@ var perform_coyote_jump: bool = false
 @onready var pixel_perfect = get_node("../..")
 
 
-func is_player_dashing() -> void:
 
-	if Input.is_action_pressed("player_run"):
-		speed = 130.0
-	else:
-		speed = 80.0 # Walking speed
-		return
 
 func player_jump() -> void:
 	perform_coyote_jump = false
@@ -61,8 +55,6 @@ func _physics_process(delta: float) -> void:
 		perform_wall_jump = true
 
 		%TimerWJ.start()
-
-	is_player_dashing()
 
 
 	# Setup for coyote jump (before move_and_slide() is called)
