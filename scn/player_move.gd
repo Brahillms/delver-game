@@ -2,6 +2,9 @@
 extends CharacterBody2D
 
 
+signal drill_touched()
+
+
 const JUMP_VELOCITY: float = -270.0
 const SPEED: float = 80.0
 
@@ -62,12 +65,12 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-
+	# Coyote jump setup
 	if (was_on_floor and not is_on_floor()) or (was_on_wall and not is_on_wall()):
 		%TimerCoyote.start()
 		perform_coyote_jump = true
 
-	# Coyote jump
+	# Coyote jump action
 	if perform_coyote_jump == true and Input.is_action_just_pressed("ui_accept"):
 		player_jump()
 		perform_coyote_jump = false
