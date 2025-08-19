@@ -9,7 +9,7 @@ const SPEED: float = 80.0
 var perform_wall_jump: bool = false
 var perform_coyote_jump: bool = false
 
-
+#I don't know why this works and not just putting %PixelPerfectScreenScaling
 @onready var pixel_perfect = get_node("../..")
 
 
