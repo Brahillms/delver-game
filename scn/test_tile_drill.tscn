@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dngryegu4acr4"]
+[gd_scene load_steps=5 format=3 uid="uid://dngryegu4acr4"]
 
 [ext_resource type="Texture2D" uid="uid://bq5ryr4qchwa4" path="res://spr/moving_element.webp" id="1_7nt8t"]
+[ext_resource type="Script" uid="uid://bqp22447fmbpq" path="res://scn/test_tile_drill_manager.gd" id="2_nqiel"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7g6o"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqiel"]
 size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pucw"]
+size = Vector2(9, 9)
 
 [node name="TestTileDrill" type="Sprite2D"]
 texture = ExtResource("1_7nt8t")
@@ -11,6 +15,14 @@ texture = ExtResource("1_7nt8t")
 [node name="TestTileDrillManager" type="StaticBody2D" parent="."]
 collision_layer = 8
 collision_mask = 0
+script = ExtResource("2_nqiel")
 
 [node name="TestTileDrillHitbox" type="CollisionShape2D" parent="TestTileDrillManager"]
-shape = SubResource("RectangleShape2D_q7g6o")
+shape = SubResource("RectangleShape2D_nqiel")
+
+[node name="TestTileDrillChecker" type="Area2D" parent="TestTileDrillManager"]
+
+[node name="TestTileDrillCheckerHitbox" type="CollisionShape2D" parent="TestTileDrillManager/TestTileDrillChecker"]
+shape = SubResource("RectangleShape2D_2pucw")
+
+[connection signal="body_entered" from="TestTileDrillManager/TestTileDrillChecker" to="TestTileDrillManager" method="_on_test_tile_drill_checker_body_entered"]

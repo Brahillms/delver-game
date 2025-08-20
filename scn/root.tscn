@@ -145,7 +145,7 @@ position = Vector2(156, 4)
 [node name="TestTileHurt" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
 position = Vector2(84, 100)
 
-[node name="TestTileSolid37" parent="PixelPerfectScreenScaling" instance=ExtResource("5_w7qhr")]
+[node name="TestTileDrill" parent="PixelPerfectScreenScaling" instance=ExtResource("5_w7qhr")]
 position = Vector2(68, 116)
 
 [node name="Player" parent="PixelPerfectScreenScaling" instance=ExtResource("3_c2doo")]

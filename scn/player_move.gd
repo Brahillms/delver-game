@@ -2,9 +2,6 @@
 extends CharacterBody2D
 
 
-signal drill_touched()
-
-
 const JUMP_VELOCITY: float = -270.0
 const SPEED: float = 80.0
 
@@ -12,7 +9,8 @@ const SPEED: float = 80.0
 var perform_wall_jump: bool = false
 var perform_coyote_jump: bool = false
 
-#I don't know why this works and not just putting %PixelPerfectScreenScaling
+# I don't know why this works and not just putting %PixelPerfectScreenScaling
+# as there's no way to guaruntee the grandparent node is the CanvasGroup node
 @onready var pixel_perfect = get_node("../..")
 
 
