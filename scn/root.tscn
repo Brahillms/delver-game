@@ -146,7 +146,7 @@ position = Vector2(156, 4)
 position = Vector2(84, 100)
 
 [node name="TestTileDrill" parent="PixelPerfectScreenScaling" instance=ExtResource("5_w7qhr")]
-position = Vector2(68, 116)
+position = Vector2(132, 100)
 
 [node name="Player" parent="PixelPerfectScreenScaling" instance=ExtResource("3_c2doo")]
-position = Vector2(124, 20)
+position = Vector2(132, 20)

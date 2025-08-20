@@ -10,6 +10,8 @@ var scale_factor: int = 1:
 
 func _ready() -> void:
 	_set_pixel_perfect_size()
+	
+	Engine.time_scale = 0.3
 
 func _set_pixel_perfect_size() -> void:
 	%PixelPerfectScreenScaling.scale = Vector2i(scale_factor, scale_factor)

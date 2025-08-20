@@ -13,6 +13,7 @@ var _perform_coyote_jump: bool = false
 func player_jump() -> void:
 	_perform_coyote_jump = false
 	velocity.y = Player.JUMP_VELOCITY * pixel_perfect.scale_factor
+	%PlayerAnims.play("jump")
 
 
 func _physics_process(delta: float) -> void:
@@ -31,10 +32,25 @@ func _physics_process(delta: float) -> void:
 	# with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
 
+	# Walking animation
+	if direction == 0 and is_on_floor_only():
+		%PlayerAnims.play("idle")
+	elif direction != 0 and is_on_floor_only():
+		%PlayerAnims.play("walk")
+
+
 	if direction and not _perform_wall_jump:
 		velocity.x = (direction * Player.SPEED) * pixel_perfect.scale_factor
+
 	elif not _perform_wall_jump:
 		velocity.x = move_toward(velocity.x, 0, Player.SPEED)
+
+# Player sprite looking directions
+	if direction > 0:
+		%PlayerAnims.flip_h = false
+	elif direction < 0:
+		%PlayerAnims.flip_h = true
+
 
 	# Wall jumping
 	if (
@@ -56,6 +72,10 @@ func _physics_process(delta: float) -> void:
 	var was_on_floor: bool = is_on_floor()
 	var was_on_wall: bool = is_on_wall()
 
+# Wall slide sprite
+	if is_on_wall_only():
+		%PlayerAnims.play("wall_slide")
+
 
 	move_and_slide()
 
@@ -68,6 +88,14 @@ func _physics_process(delta: float) -> void:
 	if _perform_coyote_jump == true and Input.is_action_just_pressed("ui_accept"):
 		player_jump()
 		_perform_coyote_jump = false
+
+	# Falling sprite
+	if velocity.y > 0 and (
+		not is_on_wall()
+		and not is_on_floor()
+		):
+
+		%PlayerAnims.play("fall")
 
 
 func _on_timer_wj_timeout() -> void:

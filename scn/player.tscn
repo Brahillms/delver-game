@@ -1,10 +1,79 @@
-[gd_scene load_steps=8 format=3 uid="uid://14xlif05ojdb"]
+[gd_scene load_steps=17 format=3 uid="uid://14xlif05ojdb"]
 
 [ext_resource type="Script" uid="uid://bjpk00d5gbo7q" path="res://scn/player.gd" id="1_3v80w"]
 [ext_resource type="Texture2D" uid="uid://ddosm1gfpu1n0" path="res://spr/hitbox.webp" id="1_386vx"]
 [ext_resource type="Script" uid="uid://dci3sn0tbol17" path="res://scn/player_move.gd" id="2_diy2p"]
 [ext_resource type="Texture2D" uid="uid://b36yjlhji3ppp" path="res://spr/hurtbox.webp" id="2_dltx8"]
+[ext_resource type="Texture2D" uid="uid://c0uxancuoxn86" path="res://spr/player_fall.webp" id="3_ajiww"]
 [ext_resource type="Script" uid="uid://w8sxdsebhba2" path="res://scn/hurt.gd" id="3_eoiiq"]
+[ext_resource type="Texture2D" uid="uid://bmnthfr7wmg54" path="res://spr/player_idle.webp" id="3_pkges"]
+[ext_resource type="Texture2D" uid="uid://dawxfm56aba5i" path="res://spr/player_jump.webp" id="4_4qvgc"]
+[ext_resource type="Texture2D" uid="uid://df2ymwepoiuff" path="res://spr/player_walk.webp" id="4_m1cso"]
+[ext_resource type="Texture2D" uid="uid://b3qrgf0kt1iea" path="res://spr/player_wall_slide.webp" id="5_37kko"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37kko"]
+atlas = ExtResource("4_m1cso")
+region = Rect2(0, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qvgc"]
+atlas = ExtResource("4_m1cso")
+region = Rect2(8, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajiww"]
+atlas = ExtResource("4_m1cso")
+region = Rect2(0, 16, 8, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3v80w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ajiww")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_pkges")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4qvgc")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37kko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qvgc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajiww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qvgc")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_37kko")
+}],
+"loop": true,
+"name": &"wall_slide",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dltx8"]
 size = Vector2(8, 16)
@@ -19,7 +88,14 @@ script = ExtResource("1_3v80w")
 collision_mask = 10
 script = ExtResource("2_diy2p")
 
+[node name="PlayerAnims" type="AnimatedSprite2D" parent="HitboxManager"]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_3v80w")
+animation = &"idle"
+frame_progress = 0.972071
+
 [node name="PlayerHitbox" type="Sprite2D" parent="HitboxManager"]
+visible = false
 texture = ExtResource("1_386vx")
 
 [node name="HitboxCollider" type="CollisionShape2D" parent="HitboxManager"]
@@ -31,6 +107,7 @@ collision_mask = 4
 script = ExtResource("3_eoiiq")
 
 [node name="PlayerHurtbox" type="Sprite2D" parent="HitboxManager/HurtboxManager"]
+visible = false
 texture = ExtResource("2_dltx8")
 
 [node name="HurtboxCollider" type="CollisionShape2D" parent="HitboxManager/HurtboxManager"]
