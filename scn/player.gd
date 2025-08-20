@@ -1,7 +1,5 @@
 class_name Player extends Node2D
 
-var health: int = 100
 
-func take_damage() -> void:
-	health -= 10
-	print(health)
+const JUMP_VELOCITY: float = -270.0
+const SPEED: float = 80.0
