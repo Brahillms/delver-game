@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dngryegu4acr4"]
+[gd_scene load_steps=5 format=3 uid="uid://bt0hyy4hyq4ji"]
 
 [ext_resource type="Texture2D" uid="uid://bq5ryr4qchwa4" path="res://spr/moving_element.webp" id="1_7nt8t"]
 [ext_resource type="Script" uid="uid://bsad40k74o44n" path="res://scn/drill.gd" id="2_2pucw"]
