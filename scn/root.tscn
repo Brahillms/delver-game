@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bsm2hommt5155"]
 
 [ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_jl64g"]
-[ext_resource type="Script" uid="uid://eqtib3unypow" path="res://scn/pixel_perfect_screen_scaling.gd" id="1_q7g6o"]
+[ext_resource type="PackedScene" uid="uid://cfoqd3u8lif2p" path="res://scn/pixel_perfect_screen_scaling.tscn" id="1_w7qhr"]
 [ext_resource type="PackedScene" uid="uid://br0clvl43ea17" path="res://scn/test_tile_solid.tscn" id="3_2i45h"]
 [ext_resource type="PackedScene" uid="uid://14xlif05ojdb" path="res://scn/player.tscn" id="3_c2doo"]
 [ext_resource type="PackedScene" uid="uid://c1xoa0dkii3pp" path="res://scn/test_tile_hurt.tscn" id="4_50olh"]
@@ -9,10 +9,8 @@
 
 [node name="Root" type="Node"]
 
-[node name="PixelPerfectScreenScaling" type="CanvasGroup" parent="."]
+[node name="PixelPerfectScreenScaling" parent="." instance=ExtResource("1_w7qhr")]
 unique_name_in_owner = true
-texture_filter = 1
-script = ExtResource("1_q7g6o")
 
 [node name="AllSmiles" type="Sprite2D" parent="PixelPerfectScreenScaling"]
 texture_filter = 1

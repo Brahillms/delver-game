@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfoqd3u8lif2p"]
+
+[ext_resource type="Script" uid="uid://eqtib3unypow" path="res://scn/pixel_perfect_screen_scaling.gd" id="1_kgb3g"]
+
+[node name="PixelPerfectScreenScaling" type="CanvasGroup"]
+texture_filter = 1
+script = ExtResource("1_kgb3g")

@@ -12,6 +12,8 @@ size = Vector2(9, 9)
 [node name="TestTileDrill" type="Sprite2D"]
 texture = ExtResource("1_7nt8t")
 script = ExtResource("2_2pucw")
+max_dist = 16.0
+move_speed = 50.0
 
 [node name="TestTileDrillManager" type="StaticBody2D" parent="."]
 collision_layer = 8
@@ -26,11 +28,5 @@ debug_color = Color(1, 0.501961, 0, 0.419608)
 [node name="TestTileDrillCheckerHitbox" type="CollisionShape2D" parent="TestTileDrillManager/TestTileDrillChecker"]
 shape = SubResource("RectangleShape2D_2pucw")
 
-[node name="TimerDrillResetPos" type="Timer" parent="."]
-unique_name_in_owner = true
-wait_time = 0.75
-one_shot = true
-
 [connection signal="body_entered" from="TestTileDrillManager/TestTileDrillChecker" to="." method="_on_test_tile_drill_checker_body_entered"]
 [connection signal="body_exited" from="TestTileDrillManager/TestTileDrillChecker" to="." method="_on_test_tile_drill_checker_body_exited"]
-[connection signal="timeout" from="TimerDrillResetPos" to="." method="_on_timer_drill_reset_pos_timeout"]
