@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://br0clvl43ea17" path="res://scn/test_tile_solid.tscn" id="3_2i45h"]
 [ext_resource type="PackedScene" uid="uid://14xlif05ojdb" path="res://scn/player.tscn" id="3_c2doo"]
 [ext_resource type="PackedScene" uid="uid://c1xoa0dkii3pp" path="res://scn/test_tile_hurt.tscn" id="4_50olh"]
-[ext_resource type="PackedScene" path="res://scn/test_tile_drill.tscn" id="5_w7qhr"]
+[ext_resource type="PackedScene" uid="uid://bt0hyy4hyq4ji" path="res://scn/test_tile_drill.tscn" id="5_w7qhr"]
 
 [node name="Root" type="Node"]
 
