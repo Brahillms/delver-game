@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_jl64g"]
 [ext_resource type="PackedScene" uid="uid://cfoqd3u8lif2p" path="res://scn/pixel_perfect_screen_scaling.tscn" id="1_w7qhr"]
-[ext_resource type="PackedScene" uid="uid://br0clvl43ea17" path="res://scn/test_tile_solid.tscn" id="3_2i45h"]
 [ext_resource type="PackedScene" uid="uid://14xlif05ojdb" path="res://scn/player.tscn" id="3_c2doo"]
 [ext_resource type="PackedScene" uid="uid://c1xoa0dkii3pp" path="res://scn/test_tile_hurt.tscn" id="4_50olh"]
+[ext_resource type="PackedScene" uid="uid://dty11avsj5fsv" path="res://scn/base_tileset.tscn" id="5_50olh"]
 
 [node name="Root" type="Node"]
 
@@ -31,116 +31,10 @@ texture_filter = 1
 position = Vector2(252, 188)
 texture = ExtResource("1_jl64g")
 
-[node name="TestTileSolid" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(100, 132)
-
-[node name="TestTileSolid2" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(108, 132)
-
-[node name="TestTileSolid3" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(116, 132)
-
-[node name="TestTileSolid4" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(124, 132)
-
-[node name="TestTileSolid5" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(132, 132)
-
-[node name="TestTileSolid6" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(140, 132)
-
-[node name="TestTileSolid7" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(148, 132)
-
-[node name="TestTileSolid8" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(156, 132)
-
-[node name="TestTileSolid9" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(164, 132)
-
-[node name="TestTileSolid10" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(172, 132)
-
-[node name="TestTileSolid11" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(180, 132)
-
-[node name="TestTileSolid12" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(188, 132)
-
-[node name="TestTileSolid13" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(196, 132)
-
-[node name="TestTileSolid14" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(196, 100)
-
-[node name="TestTileSolid15" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(196, 92)
-
-[node name="TestTileSolid16" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(196, 84)
-
-[node name="TestTileSolid17" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(156, 84)
-
-[node name="TestTileSolid18" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(156, 76)
-
-[node name="TestTileSolid19" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(156, 68)
-
-[node name="TestTileSolid20" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(196, 76)
-
-[node name="TestTileSolid21" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(196, 68)
-
-[node name="TestTileSolid22" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(196, 60)
-
-[node name="TestTileSolid23" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(156, 60)
-
-[node name="TestTileSolid24" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(156, 52)
-
-[node name="TestTileSolid25" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(156, 44)
-
-[node name="TestTileSolid26" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(196, 52)
-
-[node name="TestTileSolid27" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(196, 44)
-
-[node name="TestTileSolid28" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(196, 36)
-
-[node name="TestTileSolid29" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(156, 36)
-
-[node name="TestTileSolid30" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(156, 28)
-
-[node name="TestTileSolid31" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(156, 20)
-
-[node name="TestTileSolid32" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(196, 28)
-
-[node name="TestTileSolid33" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(196, 20)
-
-[node name="TestTileSolid34" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(196, 12)
-
-[node name="TestTileSolid35" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(156, 12)
-
-[node name="TestTileSolid36" parent="PixelPerfectScreenScaling" instance=ExtResource("3_2i45h")]
-position = Vector2(156, 4)
-
 [node name="TestTileHurt" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
 position = Vector2(84, 100)
 
 [node name="Player" parent="PixelPerfectScreenScaling" instance=ExtResource("3_c2doo")]
 position = Vector2(132, 20)
+
+[node name="BaseTileset" parent="PixelPerfectScreenScaling" instance=ExtResource("5_50olh")]
