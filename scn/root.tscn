@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cfoqd3u8lif2p" path="res://scn/pixel_perfect_screen_scaling.tscn" id="1_w7qhr"]
 [ext_resource type="PackedScene" uid="uid://14xlif05ojdb" path="res://scn/player.tscn" id="3_c2doo"]
 [ext_resource type="PackedScene" uid="uid://c1xoa0dkii3pp" path="res://scn/test_tile_hurt.tscn" id="4_50olh"]
-[ext_resource type="PackedScene" uid="uid://dty11avsj5fsv" path="res://scn/base_tileset.tscn" id="5_50olh"]
+[ext_resource type="PackedScene" uid="uid://8avdwlfhjx1p" path="res://scn/sand_tileset.tscn" id="5_50olh"]
 
 [node name="Root" type="Node"]
 
@@ -37,4 +37,4 @@ position = Vector2(84, 100)
 [node name="Player" parent="PixelPerfectScreenScaling" instance=ExtResource("3_c2doo")]
 position = Vector2(132, 20)
 
-[node name="BaseTileset" parent="PixelPerfectScreenScaling" instance=ExtResource("5_50olh")]
+[node name="SandTileset" parent="PixelPerfectScreenScaling" instance=ExtResource("5_50olh")]
