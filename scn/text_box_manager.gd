@@ -65,7 +65,7 @@ message: String) -> void:
 	if message != "":
 		%TextBoxContents.set_text("* " + message)
 	else: # Failsafe text
-		%TextBoxContents.set_text("I forgot what I was gonna say")
+		%TextBoxContents.set_text("* I forgot what I was gonna say.")
 	
 	%PlayerEmotions.play()
 	
