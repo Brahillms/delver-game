@@ -1,6 +1,9 @@
 class_name TextBoxManager extends AnimatedSprite2D
 
 
+enum Init { OPENING, IDLE, CLOSING, OPENING_CLOSING }
+
+
 var _speaking_voice : AudioStreamPlayer
 var is_currently_talking: bool = false
 
@@ -34,14 +37,16 @@ func _advance() -> void:
 		await get_tree().process_frame
 
 
-func display_textbox(init: bool,
-deinit: bool,
+func display_textbox(init: TextBoxManager.Init,
 voice: String,
 emotion: String,
 message: String) -> void:
 	
-	if init:
-		await _init_textbox()
+	match init:
+		Init.OPENING:
+			await _init_textbox()
+		Init.OPENING_CLOSING:
+			await _init_textbox()
 	
 	# Handle dialogue speaking voice
 	match voice:
@@ -83,10 +88,13 @@ message: String) -> void:
 	
 	await _advance()
 	
-	_visible_chars = 1
+	_visible_chars = 2
 	
-	if deinit:
-		await _deinit_textbox()
+	match init:
+		Init.CLOSING:
+			await _deinit_textbox()
+		Init.OPENING_CLOSING:
+			await _deinit_textbox()
 
 func _physics_process(_delta: float) -> void:
 	pass
