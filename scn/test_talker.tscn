@@ -25,4 +25,5 @@ script = ExtResource("4_e3w1u")
 
 [connection signal="body_entered" from="TalkerHitboxManager" to="." method="_on_talker_hitbox_manager_body_entered"]
 [connection signal="body_entered" from="TalkerHitboxManager" to="SpeechBubble" method="_on_talker_hitbox_manager_body_entered"]
+[connection signal="body_exited" from="TalkerHitboxManager" to="." method="_on_talker_hitbox_manager_body_exited"]
 [connection signal="body_exited" from="TalkerHitboxManager" to="SpeechBubble" method="_on_talker_hitbox_manager_body_exited"]

@@ -8,6 +8,7 @@ var _perform_coyote_jump: bool = false
 # I don't know why this works and not just putting %PixelPerfectScreenScaling
 # as there's no way to guaruntee the grandparent node is the CanvasGroup node
 @onready var pixel_perfect = get_node("../..")
+@onready var textbox_manager = get_parent().get_node("%TextBoxManager")
 
 
 func player_jump() -> void:
@@ -23,7 +24,7 @@ func _physics_process(delta: float) -> void:
 		velocity += (get_gravity() * delta) * pixel_perfect.scale_factor
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not textbox_manager.is_currently_talking:
 		player_jump()
 
 
@@ -39,10 +40,10 @@ func _physics_process(delta: float) -> void:
 		%PlayerAnims.play("walk")
 
 
-	if direction and not _perform_wall_jump:
+	if direction and not _perform_wall_jump and not textbox_manager.is_currently_talking:
 		velocity.x = (direction * Player.SPEED) * pixel_perfect.scale_factor
 
-	elif not _perform_wall_jump:
+	elif not _perform_wall_jump and not textbox_manager.is_currently_talking:
 		velocity.x = move_toward(velocity.x, 0, Player.SPEED)
 
 # Player sprite looking directions
@@ -96,6 +97,10 @@ func _physics_process(delta: float) -> void:
 		):
 
 		%PlayerAnims.play("fall")
+
+	# Textbox initialized
+	if textbox_manager.is_currently_talking:
+		velocity = Vector2(0, 0)
 
 
 func _on_timer_wj_timeout() -> void:

@@ -10,6 +10,8 @@ var scale_factor: int = 1:
 
 func _ready() -> void:
 	_set_pixel_perfect_size()
+	
+	#Engine.time_scale = 0.5
 
 
 func _set_pixel_perfect_size() -> void:
@@ -19,7 +21,7 @@ func _set_pixel_perfect_size() -> void:
 	)
 
 # In-game window rescaling
-func _process(_delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("inc_screen_scale"):
 		if scale_factor <= 5:
 			scale_factor += 1
