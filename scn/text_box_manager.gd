@@ -79,8 +79,8 @@ message: String) -> void:
 		
 		
 		%TextBoxContents.set_visible_characters(_visible_chars)
-		%Timer.start()
-		await %Timer.timeout
+		$Timer.start()
+		await $Timer.timeout
 	
 	%PlayerEmotions.pause()
 	

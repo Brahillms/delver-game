@@ -2,6 +2,7 @@ extends Sprite2D
 
 var is_within_talking_range: bool = false
 var shut_up: bool = false
+#var _reread_count: int = 0
 
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_within_talking_range and not shut_up:

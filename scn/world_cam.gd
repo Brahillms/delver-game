@@ -17,16 +17,6 @@ func _advance(dir: Vector2i) -> void:
 	position_smoothing_enabled = false
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	print(_is_advancing)
-
-
 func _on_advance_screen_t_body_entered(_body: Node2D) -> void:
 	if not _is_advancing:
 		await _advance(Vector2i(0, 1))
