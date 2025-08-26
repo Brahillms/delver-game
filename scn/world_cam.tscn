@@ -42,6 +42,38 @@ unique_name_in_owner = true
 position = Vector2(-128, 0)
 shape = SubResource("RectangleShape2D_ck670")
 
+[node name="PlayerRetriggerBufferT" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerRetriggerBufferT"]
+position = Vector2(0, -104)
+shape = SubResource("RectangleShape2D_msqgo")
+
+[node name="PlayerRetriggerBufferR" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerRetriggerBufferR"]
+position = Vector2(136, 0)
+shape = SubResource("RectangleShape2D_l6tgo")
+
+[node name="PlayerRetriggerBufferB" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerRetriggerBufferB"]
+position = Vector2(0, 104)
+shape = SubResource("RectangleShape2D_msqgo")
+
+[node name="PlayerRetriggerBufferL" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerRetriggerBufferL"]
+position = Vector2(-136, 0)
+shape = SubResource("RectangleShape2D_ck670")
+
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 

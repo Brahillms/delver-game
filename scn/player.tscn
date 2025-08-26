@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://14xlif05ojdb"]
+[gd_scene load_steps=19 format=3 uid="uid://14xlif05ojdb"]
 
 [ext_resource type="Script" uid="uid://bjpk00d5gbo7q" path="res://scn/player.gd" id="1_3v80w"]
 [ext_resource type="Texture2D" uid="uid://ddosm1gfpu1n0" path="res://spr/hitbox.webp" id="1_386vx"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://dawxfm56aba5i" path="res://spr/player_jump.webp" id="4_4qvgc"]
 [ext_resource type="Texture2D" uid="uid://df2ymwepoiuff" path="res://spr/player_walk.webp" id="4_m1cso"]
 [ext_resource type="Texture2D" uid="uid://b3qrgf0kt1iea" path="res://spr/player_wall_slide.webp" id="5_37kko"]
+[ext_resource type="AudioStream" uid="uid://cf1gbgjyrsf1i" path="res://snd/explosion_die_very_ow.wav" id="11_rr467"]
+[ext_resource type="AudioStream" uid="uid://ddq6ehcsi3c50" path="res://snd/FAIL_CIRCUMSTANCE.wav" id="12_7y8th"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_37kko"]
 atlas = ExtResource("4_m1cso")
@@ -113,6 +115,12 @@ texture = ExtResource("2_dltx8")
 [node name="HurtboxCollider" type="CollisionShape2D" parent="HitboxManager/HurtboxManager"]
 shape = SubResource("RectangleShape2D_diy2p")
 debug_color = Color(1, 0, 0, 0.215686)
+
+[node name="HurtSFX" type="AudioStreamPlayer" parent="HitboxManager/HurtboxManager"]
+stream = ExtResource("11_rr467")
+
+[node name="GameOverSFX" type="AudioStreamPlayer" parent="HitboxManager/HurtboxManager"]
+stream = ExtResource("12_7y8th")
 
 [node name="TimerWJ" type="Timer" parent="."]
 unique_name_in_owner = true
