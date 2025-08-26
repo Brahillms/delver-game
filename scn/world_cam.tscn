@@ -1,3 +1,51 @@
-[gd_scene format=3 uid="uid://duo8gyamq7gdv"]
+[gd_scene load_steps=5 format=3 uid="uid://duo8gyamq7gdv"]
+
+[ext_resource type="Script" uid="uid://bpjllp1b5ngkj" path="res://scn/world_cam.gd" id="1_l6tgo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_msqgo"]
+size = Vector2(264, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6tgo"]
+size = Vector2(8, 184)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ck670"]
+size = Vector2(8, 184)
 
 [node name="WorldCam" type="Camera2D"]
+script = ExtResource("1_l6tgo")
+
+[node name="AdvanceScreenT" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AdvanceScreenT"]
+position = Vector2(0, -96)
+shape = SubResource("RectangleShape2D_msqgo")
+
+[node name="AdvanceScreenR" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AdvanceScreenR"]
+position = Vector2(128, 0)
+shape = SubResource("RectangleShape2D_l6tgo")
+
+[node name="AdvanceScreenB" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AdvanceScreenB"]
+position = Vector2(0, 96)
+shape = SubResource("RectangleShape2D_msqgo")
+
+[node name="AdvanceScreenL" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AdvanceScreenL"]
+position = Vector2(-128, 0)
+shape = SubResource("RectangleShape2D_ck670")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="AdvanceScreenT" to="." method="_on_advance_screen_t_body_entered"]
+[connection signal="body_entered" from="AdvanceScreenR" to="." method="_on_advance_screen_r_body_entered"]
+[connection signal="body_entered" from="AdvanceScreenB" to="." method="_on_advance_screen_b_body_entered"]
+[connection signal="body_entered" from="AdvanceScreenL" to="." method="_on_advance_screen_l_body_entered"]
