@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://dn4w2n1ogplt0"]
+
+[ext_resource type="AudioStream" uid="uid://fey4wr1tcdqp" path="res://mus/adventure_bass.ogg" id="1_5cvcl"]
+[ext_resource type="AudioStream" uid="uid://cb25se4xcll52" path="res://mus/adventure_drum.ogg" id="2_cc60s"]
+[ext_resource type="AudioStream" uid="uid://doc7vl2q2opy3" path="res://mus/adventure_square.ogg" id="3_62ymp"]
+[ext_resource type="Script" uid="uid://8k8ndyv54acm" path="res://scn/music.gd" id="4_yt7hp"]
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_5cvcl"]
+stream_count = 2
+stream_0/stream = ExtResource("1_5cvcl")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("2_cc60s")
+stream_1/volume = 0.0
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_cc60s"]
+stream_count = 3
+stream_0/stream = ExtResource("1_5cvcl")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("2_cc60s")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("3_62ymp")
+stream_2/volume = 0.0
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_5cvcl"]
+clip_count = 3
+clip_0/name = &"Adventure Bass"
+clip_0/stream = ExtResource("1_5cvcl")
+clip_0/auto_advance = 1
+clip_0/next_clip = 1
+clip_1/name = &"Adventure Drums"
+clip_1/stream = SubResource("AudioStreamSynchronized_5cvcl")
+clip_1/auto_advance = 1
+clip_1/next_clip = 2
+clip_2/name = &"Adventure Square"
+clip_2/stream = SubResource("AudioStreamSynchronized_cc60s")
+clip_2/auto_advance = 1
+clip_2/next_clip = 0
+
+[node name="Music" type="AudioStreamPlayer"]
+stream = SubResource("AudioStreamInteractive_5cvcl")
+script = ExtResource("4_yt7hp")

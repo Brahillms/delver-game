@@ -10,7 +10,7 @@ func _physics_process(_delta: float) -> void:
 		await %TextBoxManager.display_textbox(TextBoxManager.Init.OPENING, "player", "talking_looking_left", "This might be the only way in...")
 		await %TextBoxManager.display_textbox(TextBoxManager.Init.IDLE, "player", "talking_looking_left", "...or out.")
 		await %TextBoxManager.display_textbox(TextBoxManager.Init.CLOSING, "player", "pensive", "Please come home, buddy.")
-		Global.entered_cave = true
+		Global.entered_cave.emit()
 
 
 func _on_talker_hitbox_manager_body_entered(_body: Node2D) -> void:

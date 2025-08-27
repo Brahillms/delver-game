@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bsm2hommt5155"]
+[gd_scene load_steps=12 format=3 uid="uid://bsm2hommt5155"]
 
 [ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_jl64g"]
 [ext_resource type="PackedScene" uid="uid://cfoqd3u8lif2p" path="res://scn/pixel_perfect_screen_scaling.tscn" id="1_w7qhr"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d33h2pin6ilve" path="res://scn/talker_cave.tscn" id="7_rdmji"]
 [ext_resource type="PackedScene" uid="uid://cx2sg4vekkfp0" path="res://scn/text_box_manager.tscn" id="8_d3gv8"]
 [ext_resource type="PackedScene" uid="uid://crurq58joxeq4" path="res://scn/talker_nothing.tscn" id="8_fm7ow"]
+[ext_resource type="PackedScene" uid="uid://dn4w2n1ogplt0" path="res://scn/music.tscn" id="11_64rku"]
 
 [node name="Root" type="Node"]
 
@@ -84,3 +85,6 @@ texture = ExtResource("1_jl64g")
 [node name="TextBoxManager" parent="PixelPerfectScreenScaling/WorldCam" instance=ExtResource("8_d3gv8")]
 unique_name_in_owner = true
 position = Vector2(4, -68)
+
+[node name="Music" parent="." instance=ExtResource("11_64rku")]
+unique_name_in_owner = true
