@@ -50,21 +50,25 @@ position = Vector2(644, 116)
 position = Vector2(128, 96)
 
 [node name="AllSmiles" type="Sprite2D" parent="PixelPerfectScreenScaling/WorldCam"]
+visible = false
 texture_filter = 1
 position = Vector2(-124, -92)
 texture = ExtResource("1_jl64g")
 
 [node name="AllSmiles2" type="Sprite2D" parent="PixelPerfectScreenScaling/WorldCam"]
+visible = false
 texture_filter = 1
 position = Vector2(124, -92)
 texture = ExtResource("1_jl64g")
 
 [node name="AllSmiles3" type="Sprite2D" parent="PixelPerfectScreenScaling/WorldCam"]
+visible = false
 texture_filter = 1
 position = Vector2(-124, 92)
 texture = ExtResource("1_jl64g")
 
 [node name="AllSmiles4" type="Sprite2D" parent="PixelPerfectScreenScaling/WorldCam"]
+visible = false
 texture_filter = 1
 position = Vector2(124, 92)
 texture = ExtResource("1_jl64g")

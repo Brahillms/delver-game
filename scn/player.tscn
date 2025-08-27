@@ -148,6 +148,7 @@ volume_db = -12.0
 [node name="WallSlideSFX" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("15_dhgk1")
+autoplay = true
 
 [connection signal="area_entered" from="HitboxManager/HurtboxManager" to="HitboxManager/HurtboxManager" method="_on_area_entered"]
 [connection signal="timeout" from="TimerWJ" to="HitboxManager" method="_on_timer_wj_timeout"]

@@ -77,10 +77,9 @@ func _physics_process(delta: float) -> void:
 
 # Wall slide sprite
 	if is_on_wall_only():
-		%PlayerAnims.play("wall_slide")
-		%WallSlideSFX.play()
+		%WallSlideSFX.set_volume_linear(1.0)
 	else:
-		%WallSlideSFX.stop()
+		%WallSlideSFX.set_volume_linear(0.0)
 
 
 	move_and_slide()
