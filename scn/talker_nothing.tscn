@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://crurq58joxeq4"]
 
-[ext_resource type="Script" uid="uid://dudmviixk0jdo" path="res://scn/talker.gd" id="2_uc8ky"]
+[ext_resource type="Script" uid="uid://b5ulycjawcq01" path="res://scn/talker_nothing.gd" id="1_0j6ur"]
 [ext_resource type="Texture2D" uid="uid://csr8mcf4rq4vd" path="res://spr/speech_bubble.webp" id="3_gxcf2"]
 [ext_resource type="AudioStream" uid="uid://ebm8pwdrr16d" path="res://snd/award.wav" id="4_0j6ur"]
 [ext_resource type="Script" uid="uid://dqt3rlw2518h5" path="res://scn/speech_bubble.gd" id="4_n770j"]
@@ -9,7 +9,7 @@
 size = Vector2(24, 24)
 
 [node name="NothingTalker" type="Sprite2D"]
-script = ExtResource("2_uc8ky")
+script = ExtResource("1_0j6ur")
 
 [node name="TalkerHitboxManager" type="Area2D" parent="."]
 collision_layer = 8
