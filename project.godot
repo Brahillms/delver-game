@@ -15,6 +15,10 @@ run/main_scene="uid://bsm2hommt5155"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 run/max_fps=30
 
+[autoload]
+
+Global="*res://scn/global.gd"
+
 [display]
 
 window/size/viewport_width=256
