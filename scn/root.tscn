@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bsm2hommt5155"]
+[gd_scene load_steps=9 format=3 uid="uid://bsm2hommt5155"]
 
 [ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_jl64g"]
 [ext_resource type="PackedScene" uid="uid://cfoqd3u8lif2p" path="res://scn/pixel_perfect_screen_scaling.tscn" id="1_w7qhr"]
@@ -7,22 +7,26 @@
 [ext_resource type="PackedScene" uid="uid://8avdwlfhjx1p" path="res://scn/sand_tileset.tscn" id="5_50olh"]
 [ext_resource type="PackedScene" uid="uid://duo8gyamq7gdv" path="res://scn/world_cam.tscn" id="7_a0w7n"]
 [ext_resource type="PackedScene" uid="uid://cx2sg4vekkfp0" path="res://scn/text_box_manager.tscn" id="8_d3gv8"]
+[ext_resource type="PackedScene" uid="uid://crurq58joxeq4" path="res://scn/talker_nothing.tscn" id="8_fm7ow"]
 
 [node name="Root" type="Node"]
 
 [node name="PixelPerfectScreenScaling" parent="." instance=ExtResource("1_w7qhr")]
 unique_name_in_owner = true
 
-[node name="SandTileset" parent="PixelPerfectScreenScaling" instance=ExtResource("5_50olh")]
-
 [node name="Player" parent="PixelPerfectScreenScaling" instance=ExtResource("3_c2doo")]
 position = Vector2(68, 120)
+
+[node name="SandTileset" parent="PixelPerfectScreenScaling" instance=ExtResource("5_50olh")]
 
 [node name="TestTileHurt" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
 position = Vector2(452, 132)
 
 [node name="TestTileHurt2" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
 position = Vector2(460, 132)
+
+[node name="NothingTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("8_fm7ow")]
+position = Vector2(644, 116)
 
 [node name="WorldCam" parent="PixelPerfectScreenScaling" instance=ExtResource("7_a0w7n")]
 position = Vector2(128, 96)

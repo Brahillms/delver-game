@@ -100,6 +100,7 @@ visible = false
 texture = ExtResource("1_386vx")
 
 [node name="HitboxCollider" type="CollisionShape2D" parent="HitboxManager"]
+scale = Vector2(1, 0.99)
 shape = SubResource("RectangleShape2D_dltx8")
 debug_color = Color(0, 1, 0, 0.215686)
 
