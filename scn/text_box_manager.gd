@@ -75,6 +75,8 @@ message: String) -> void:
 		
 		# Do not play sound for whitespace characters
 		if %TextBoxContents.text[_visible_chars - 1] != " ":
+			_speaking_voice.pitch_scale = randf_range(0.97, 1.03)
+			
 			_speaking_voice.play()
 		
 		

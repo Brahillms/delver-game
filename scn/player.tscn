@@ -94,7 +94,6 @@ script = ExtResource("2_diy2p")
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_3v80w")
 animation = &"idle"
-frame_progress = 0.972071
 
 [node name="PlayerHitbox" type="Sprite2D" parent="HitboxManager"]
 visible = false
