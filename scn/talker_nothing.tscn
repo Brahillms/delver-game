@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://crurq58joxeq4"]
+[gd_scene load_steps=6 format=3 uid="uid://crurq58joxeq4"]
 
 [ext_resource type="Script" uid="uid://dudmviixk0jdo" path="res://scn/talker.gd" id="2_uc8ky"]
 [ext_resource type="Texture2D" uid="uid://csr8mcf4rq4vd" path="res://spr/speech_bubble.webp" id="3_gxcf2"]
+[ext_resource type="AudioStream" uid="uid://ebm8pwdrr16d" path="res://snd/award.wav" id="4_0j6ur"]
 [ext_resource type="Script" uid="uid://dqt3rlw2518h5" path="res://scn/speech_bubble.gd" id="4_n770j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0vxhv"]
@@ -20,6 +21,9 @@ shape = SubResource("RectangleShape2D_0vxhv")
 position = Vector2(0, -16)
 texture = ExtResource("3_gxcf2")
 script = ExtResource("4_n770j")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0j6ur")
 
 [connection signal="body_entered" from="TalkerHitboxManager" to="." method="_on_talker_hitbox_manager_body_entered"]
 [connection signal="body_entered" from="TalkerHitboxManager" to="SpeechBubble" method="_on_talker_hitbox_manager_body_entered"]
