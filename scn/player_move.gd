@@ -13,6 +13,8 @@ var _perform_coyote_jump: bool = false
 
 func player_jump() -> void:
 	_perform_coyote_jump = false
+	%JumpSFX.pitch_scale = randf_range(0.95, 1.05)
+	%JumpSFX.play()
 	velocity.y = Player.JUMP_VELOCITY * pixel_perfect.scale_factor
 	%PlayerAnims.play("jump")
 
@@ -76,6 +78,9 @@ func _physics_process(delta: float) -> void:
 # Wall slide sprite
 	if is_on_wall_only():
 		%PlayerAnims.play("wall_slide")
+		%WallSlideSFX.play()
+	else:
+		%WallSlideSFX.stop()
 
 
 	move_and_slide()
@@ -89,6 +94,12 @@ func _physics_process(delta: float) -> void:
 	if _perform_coyote_jump == true and Input.is_action_just_pressed("ui_accept"):
 		player_jump()
 		_perform_coyote_jump = false
+
+
+	# Landing on ground sfx
+	if not was_on_floor and is_on_floor():
+		%LandGroundSFX.pitch_scale = randf_range(0.95, 1.05)
+		%LandGroundSFX.play()
 
 	# Falling sprite
 	if velocity.y > 0 and (

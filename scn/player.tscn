@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://14xlif05ojdb"]
+[gd_scene load_steps=22 format=3 uid="uid://14xlif05ojdb"]
 
 [ext_resource type="Script" uid="uid://bjpk00d5gbo7q" path="res://scn/player.gd" id="1_3v80w"]
 [ext_resource type="Texture2D" uid="uid://ddosm1gfpu1n0" path="res://spr/hitbox.webp" id="1_386vx"]
@@ -12,6 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://b3qrgf0kt1iea" path="res://spr/player_wall_slide.webp" id="5_37kko"]
 [ext_resource type="AudioStream" uid="uid://cf1gbgjyrsf1i" path="res://snd/explosion_die_very_ow.wav" id="11_rr467"]
 [ext_resource type="AudioStream" uid="uid://ddq6ehcsi3c50" path="res://snd/FAIL_CIRCUMSTANCE.wav" id="12_7y8th"]
+[ext_resource type="AudioStream" uid="uid://bxga8crql16ri" path="res://snd/jump.wav" id="13_mmd1f"]
+[ext_resource type="AudioStream" uid="uid://ckckffg5antsy" path="res://snd/landground.wav" id="14_g8pu3"]
+[ext_resource type="AudioStream" uid="uid://bth8meforxc35" path="res://snd/wall_slide.wav" id="15_dhgk1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_37kko"]
 atlas = ExtResource("4_m1cso")
@@ -131,6 +134,20 @@ one_shot = true
 unique_name_in_owner = true
 wait_time = 0.15
 one_shot = true
+
+[node name="JumpSFX" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("13_mmd1f")
+volume_db = -14.0
+
+[node name="LandGroundSFX" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("14_g8pu3")
+volume_db = -12.0
+
+[node name="WallSlideSFX" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("15_dhgk1")
 
 [connection signal="area_entered" from="HitboxManager/HurtboxManager" to="HitboxManager/HurtboxManager" method="_on_area_entered"]
 [connection signal="timeout" from="TimerWJ" to="HitboxManager" method="_on_timer_wj_timeout"]

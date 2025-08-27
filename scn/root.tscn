@@ -25,6 +25,24 @@ position = Vector2(452, 132)
 [node name="TestTileHurt2" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
 position = Vector2(460, 132)
 
+[node name="TestTileHurt3" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(884, 172)
+
+[node name="TestTileHurt4" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(892, 172)
+
+[node name="TestTileHurt5" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(900, 180)
+
+[node name="TestTileHurt6" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(908, 180)
+
+[node name="TestTileHurt7" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(916, 180)
+
+[node name="TestTileHurt8" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(924, 180)
+
 [node name="NothingTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("8_fm7ow")]
 position = Vector2(644, 116)
 

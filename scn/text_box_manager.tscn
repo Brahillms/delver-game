@@ -234,10 +234,12 @@ visible_characters = 2
 [node name="TextVoiceNormal" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("5_kngwh")
+volume_db = -8.0
 
 [node name="TextVoicePlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("6_s4o4s")
+volume_db = -8.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.05
