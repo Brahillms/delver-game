@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3oyl1e2mjkr7"]
+
+[ext_resource type="Texture2D" uid="uid://co7mijlwkjv5p" path="res://spr/cave_entrance.webp" id="1_3816f"]
+
+[node name="CaveEntrance" type="Sprite2D"]
+texture = ExtResource("1_3816f")
