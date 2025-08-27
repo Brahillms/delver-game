@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://d33h2pin6ilve"]
+
+[ext_resource type="Script" uid="uid://ccmtdh8uci5jn" path="res://scn/talker_cave.gd" id="1_mv812"]
+[ext_resource type="Texture2D" uid="uid://csr8mcf4rq4vd" path="res://spr/speech_bubble.webp" id="2_mus85"]
+[ext_resource type="Script" uid="uid://dqt3rlw2518h5" path="res://scn/speech_bubble.gd" id="3_nxvcb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vxhv"]
+size = Vector2(24, 24)
+
+[node name="CaveTalker" type="Sprite2D"]
+script = ExtResource("1_mv812")
+
+[node name="TalkerHitboxManager" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="TalkerHitbox" type="CollisionShape2D" parent="TalkerHitboxManager"]
+shape = SubResource("RectangleShape2D_0vxhv")
+
+[node name="SpeechBubble" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("2_mus85")
+script = ExtResource("3_nxvcb")
+
+[connection signal="body_entered" from="TalkerHitboxManager" to="." method="_on_talker_hitbox_manager_body_entered"]
+[connection signal="body_entered" from="TalkerHitboxManager" to="SpeechBubble" method="_on_talker_hitbox_manager_body_entered"]
+[connection signal="body_exited" from="TalkerHitboxManager" to="." method="_on_talker_hitbox_manager_body_exited"]
+[connection signal="body_exited" from="TalkerHitboxManager" to="SpeechBubble" method="_on_talker_hitbox_manager_body_exited"]
