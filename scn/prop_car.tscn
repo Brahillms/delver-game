@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg67w4dmiokuh"]
+
+[ext_resource type="Texture2D" uid="uid://blhvh712yn5tq" path="res://spr/prop_car.webp" id="1_hgkte"]
+
+[node name="PropCar" type="Sprite2D"]
+texture = ExtResource("1_hgkte")
