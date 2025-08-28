@@ -17,6 +17,14 @@ func _advance(dir: Vector2i) -> void:
 	position_smoothing_enabled = false
 
 
+func _ready() -> void:
+	Global.entered_cave.connect(_on_entered_cave)
+
+
+func _on_entered_cave() -> void:
+	position += Vector2(256 * 2, -192)
+
+
 func _on_advance_screen_t_body_entered(_body: Node2D) -> void:
 	if not _is_advancing:
 		await _advance(Vector2i(0, 1))
