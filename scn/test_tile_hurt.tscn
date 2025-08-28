@@ -1,12 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1xoa0dkii3pp"]
+[gd_scene load_steps=4 format=3 uid="uid://c1xoa0dkii3pp"]
 
 [ext_resource type="Texture2D" uid="uid://ceyuvk5xvmnc1" path="res://spr/that_one_evil_bro.webp" id="1_41son"]
 
+[sub_resource type="GDScript" id="GDScript_41son"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	visible = false
+"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hlpob"]
-size = Vector2(8, 8)
+size = Vector2(6, 6)
 
 [node name="TestTileHurt" type="Sprite2D"]
 texture = ExtResource("1_41son")
+script = SubResource("GDScript_41son")
 
 [node name="TestTileHurtManager" type="Area2D" parent="."]
 collision_layer = 4
