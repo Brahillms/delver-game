@@ -1,17 +1,21 @@
-[gd_scene load_steps=13 format=3 uid="uid://bsm2hommt5155"]
+[gd_scene load_steps=17 format=3 uid="uid://bsm2hommt5155"]
 
 [ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_jl64g"]
 [ext_resource type="PackedScene" uid="uid://cfoqd3u8lif2p" path="res://scn/pixel_perfect_screen_scaling.tscn" id="1_w7qhr"]
 [ext_resource type="PackedScene" uid="uid://b3oyl1e2mjkr7" path="res://scn/cave_entrance.tscn" id="2_fm7ow"]
 [ext_resource type="PackedScene" uid="uid://14xlif05ojdb" path="res://scn/player.tscn" id="3_c2doo"]
+[ext_resource type="PackedScene" uid="uid://dg67w4dmiokuh" path="res://scn/prop_car.tscn" id="3_seq05"]
 [ext_resource type="PackedScene" uid="uid://c1xoa0dkii3pp" path="res://scn/test_tile_hurt.tscn" id="4_50olh"]
 [ext_resource type="PackedScene" uid="uid://8avdwlfhjx1p" path="res://scn/sand_tileset.tscn" id="5_50olh"]
 [ext_resource type="PackedScene" uid="uid://csaw87aqrnml4" path="res://scn/spike_tileset.tscn" id="5_yytp0"]
+[ext_resource type="PackedScene" uid="uid://dty11avsj5fsv" path="res://scn/base_tileset.tscn" id="6_tul53"]
 [ext_resource type="PackedScene" uid="uid://duo8gyamq7gdv" path="res://scn/world_cam.tscn" id="7_a0w7n"]
 [ext_resource type="PackedScene" uid="uid://d33h2pin6ilve" path="res://scn/talker_cave.tscn" id="7_rdmji"]
 [ext_resource type="PackedScene" uid="uid://cx2sg4vekkfp0" path="res://scn/text_box_manager.tscn" id="8_d3gv8"]
 [ext_resource type="PackedScene" uid="uid://crurq58joxeq4" path="res://scn/talker_nothing.tscn" id="8_fm7ow"]
+[ext_resource type="PackedScene" uid="uid://bo5uorse1kv2g" path="res://scn/cave_barrier.tscn" id="9_m3qda"]
 [ext_resource type="PackedScene" uid="uid://dn4w2n1ogplt0" path="res://scn/music.tscn" id="11_64rku"]
+[ext_resource type="PackedScene" uid="uid://gmjvjywmmktc" path="res://scn/talker_car.tscn" id="16_kuite"]
 
 [node name="Root" type="Node"]
 
@@ -21,12 +25,17 @@ unique_name_in_owner = true
 [node name="CaveEntrance" parent="PixelPerfectScreenScaling" instance=ExtResource("2_fm7ow")]
 position = Vector2(1196, 124)
 
+[node name="PropCar" parent="PixelPerfectScreenScaling" instance=ExtResource("3_seq05")]
+position = Vector2(36, 120)
+
 [node name="Player" parent="PixelPerfectScreenScaling" instance=ExtResource("3_c2doo")]
 position = Vector2(68, 120)
 
 [node name="SandTileset" parent="PixelPerfectScreenScaling" instance=ExtResource("5_50olh")]
 
 [node name="SpikeTileset" parent="PixelPerfectScreenScaling" instance=ExtResource("5_yytp0")]
+
+[node name="BaseTileset" parent="PixelPerfectScreenScaling" instance=ExtResource("6_tul53")]
 
 [node name="TestTileHurt" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
 position = Vector2(452, 132)
@@ -52,11 +61,185 @@ position = Vector2(916, 180)
 [node name="TestTileHurt8" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
 position = Vector2(924, 180)
 
+[node name="TestTileHurt9" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(1956, -44)
+
+[node name="TestTileHurt10" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(1964, -44)
+
+[node name="TestTileHurt11" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2084, -20)
+
+[node name="TestTileHurt12" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2092, -20)
+
+[node name="TestTileHurt13" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2100, -20)
+
+[node name="TestTileHurt14" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2108, -20)
+
+[node name="TestTileHurt15" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2116, -20)
+
+[node name="TestTileHurt16" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2124, -20)
+
+[node name="TestTileHurt17" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2132, -20)
+
+[node name="TestTileHurt18" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2140, -20)
+
+[node name="TestTileHurt19" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2172, -20)
+
+[node name="TestTileHurt20" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2180, -20)
+
+[node name="TestTileHurt21" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2188, -20)
+
+[node name="TestTileHurt22" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2196, -20)
+
+[node name="TestTileHurt23" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2220, -20)
+
+[node name="TestTileHurt24" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2252, -20)
+
+[node name="TestTileHurt25" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2260, -20)
+
+[node name="TestTileHurt26" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2268, -20)
+
+[node name="TestTileHurt27" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2276, -20)
+
+[node name="TestTileHurt28" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2156, 92)
+
+[node name="TestTileHurt29" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2164, 92)
+
+[node name="TestTileHurt30" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2284, 108)
+
+[node name="TestTileHurt31" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2292, 108)
+
+[node name="TestTileHurt32" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2060, 180)
+
+[node name="TestTileHurt33" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2068, 180)
+
+[node name="TestTileHurt34" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2076, 180)
+
+[node name="TestTileHurt35" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2084, 180)
+
+[node name="TestTileHurt36" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2092, 180)
+
+[node name="TestTileHurt37" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2100, 180)
+
+[node name="TestTileHurt38" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2108, 180)
+
+[node name="TestTileHurt39" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2116, 180)
+
+[node name="TestTileHurt40" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2124, 180)
+
+[node name="TestTileHurt41" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2132, 180)
+
+[node name="TestTileHurt42" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2140, 180)
+
+[node name="TestTileHurt43" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2148, 180)
+
+[node name="TestTileHurt44" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2156, 180)
+
+[node name="TestTileHurt45" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2164, 180)
+
+[node name="TestTileHurt46" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2172, 180)
+
+[node name="TestTileHurt47" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2180, 180)
+
+[node name="TestTileHurt48" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2188, 180)
+
+[node name="TestTileHurt49" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2196, 180)
+
+[node name="TestTileHurt50" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2204, 180)
+
+[node name="TestTileHurt51" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2212, 180)
+
+[node name="TestTileHurt52" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2220, 180)
+
+[node name="TestTileHurt53" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2228, 180)
+
+[node name="TestTileHurt54" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2236, 180)
+
+[node name="TestTileHurt55" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2108, 100)
+
+[node name="TestTileHurt56" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2108, 60)
+
+[node name="TestTileHurt57" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2092, 52)
+
+[node name="TestTileHurt58" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2268, 180)
+
+[node name="TestTileHurt59" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2276, 180)
+
+[node name="TestTileHurt60" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2284, 180)
+
+[node name="TestTileHurt61" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2292, 180)
+
+[node name="TestTileHurt62" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2084, 52)
+
+[node name="TestTileHurt63" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2076, 52)
+
+[node name="TestTileHurt64" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+position = Vector2(2068, 52)
+
+[node name="CarTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("16_kuite")]
+position = Vector2(36, 116)
+
 [node name="NothingTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("8_fm7ow")]
 position = Vector2(644, 116)
 
 [node name="CaveTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("7_rdmji")]
 position = Vector2(1196, 132)
+
+[node name="CaveBarrier" parent="PixelPerfectScreenScaling" instance=ExtResource("9_m3qda")]
+position = Vector2(1260, 108)
 
 [node name="WorldCam" parent="PixelPerfectScreenScaling" instance=ExtResource("7_a0w7n")]
 position = Vector2(128, 96)

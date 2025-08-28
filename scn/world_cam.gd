@@ -27,7 +27,7 @@ func _on_entered_cave() -> void:
 
 func _on_advance_screen_t_body_entered(_body: Node2D) -> void:
 	if not _is_advancing:
-		await _advance(Vector2i(0, 1))
+		await _advance(Vector2i(0, -1))
 
 
 func _on_advance_screen_r_body_entered(_body: Node2D) -> void:
@@ -37,7 +37,7 @@ func _on_advance_screen_r_body_entered(_body: Node2D) -> void:
 
 func _on_advance_screen_b_body_entered(_body: Node2D) -> void:
 	if not _is_advancing:
-		await _advance(Vector2i(0, -1))
+		await _advance(Vector2i(0, 1))
 
 
 func _on_advance_screen_l_body_entered(_body: Node2D) -> void:
