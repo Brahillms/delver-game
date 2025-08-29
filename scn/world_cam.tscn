@@ -15,28 +15,24 @@ size = Vector2(8, 184)
 script = ExtResource("1_l6tgo")
 
 [node name="AdvanceScreenT" type="Area2D" parent="."]
-unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AdvanceScreenT"]
 position = Vector2(0, -96)
 shape = SubResource("RectangleShape2D_msqgo")
 
 [node name="AdvanceScreenR" type="Area2D" parent="."]
-unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AdvanceScreenR"]
 position = Vector2(128, 0)
 shape = SubResource("RectangleShape2D_l6tgo")
 
 [node name="AdvanceScreenB" type="Area2D" parent="."]
-unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AdvanceScreenB"]
 position = Vector2(0, 96)
 shape = SubResource("RectangleShape2D_msqgo")
 
 [node name="AdvanceScreenL" type="Area2D" parent="."]
-unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AdvanceScreenL"]
 position = Vector2(-128, 0)
