@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bsm2hommt5155"]
+[gd_scene load_steps=21 format=3 uid="uid://bsm2hommt5155"]
 
 [ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_jl64g"]
 [ext_resource type="PackedScene" uid="uid://cfoqd3u8lif2p" path="res://scn/pixel_perfect_screen_scaling.tscn" id="1_w7qhr"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://crurq58joxeq4" path="res://scn/talker_nothing.tscn" id="8_fm7ow"]
 [ext_resource type="PackedScene" uid="uid://bo5uorse1kv2g" path="res://scn/cave_barrier.tscn" id="9_m3qda"]
 [ext_resource type="PackedScene" uid="uid://dn4w2n1ogplt0" path="res://scn/music.tscn" id="11_64rku"]
+[ext_resource type="PackedScene" uid="uid://b14puh4yxgjwt" path="res://scn/talker_employee.tscn" id="12_wqka6"]
 [ext_resource type="PackedScene" uid="uid://bpionqvq3dthp" path="res://scn/unlockable_passage.tscn" id="13_g2d4s"]
 [ext_resource type="PackedScene" uid="uid://dnvb0kypldehe" path="res://scn/unlock_door_collectable.tscn" id="14_x1odf"]
 [ext_resource type="PackedScene" uid="uid://cc6k58rx41s7c" path="res://scn/the_door.tscn" id="15_mk53a"]
@@ -240,6 +241,9 @@ position = Vector2(644, 116)
 
 [node name="CaveTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("7_rdmji")]
 position = Vector2(1196, 132)
+
+[node name="EmployeeTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("12_wqka6")]
+position = Vector2(1832, 292)
 
 [node name="CaveBarrier" parent="PixelPerfectScreenScaling" instance=ExtResource("9_m3qda")]
 position = Vector2(1260, 108)

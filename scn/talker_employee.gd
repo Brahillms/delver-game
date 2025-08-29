@@ -12,7 +12,8 @@ func _physics_process(_delta: float) -> void:
 		await %TextBoxManager.display_textbox(TextBoxManager.Init.IDLE, "", "", "The foreman...")
 		await %TextBoxManager.display_textbox(TextBoxManager.Init.IDLE, "", "", "He's down there to the right.")
 		await %TextBoxManager.display_textbox(TextBoxManager.Init.IDLE, "", "", "He should be in his office.")
-		await %TextBoxManager.display_textbox(TextBoxManager.Init.CLOSING, "player", "talking", "Okay, thanks a lot!")
+		await %TextBoxManager.display_textbox(TextBoxManager.Init.IDLE, "player", "talking", "Okay, thanks a lot!")
+		await %TextBoxManager.display_textbox(TextBoxManager.Init.CLOSING, "", "", "np :p")
 
 
 
