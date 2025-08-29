@@ -246,20 +246,20 @@ position = Vector2(1260, 108)
 [node name="UnlockablePassage" parent="PixelPerfectScreenScaling" instance=ExtResource("13_g2d4s")]
 position = Vector2(1872, 192)
 
-[node name="UnlockDoorCollectable" parent="PixelPerfectScreenScaling" instance=ExtResource("14_x1odf")]
-position = Vector2(1916, 36)
+[node name="UnlockDoorCollectable" parent="PixelPerfectScreenScaling/UnlockablePassage" instance=ExtResource("14_x1odf")]
+position = Vector2(44, -156)
 
-[node name="UnlockDoorCollectable2" parent="PixelPerfectScreenScaling" instance=ExtResource("14_x1odf")]
-position = Vector2(1908, 140)
+[node name="UnlockDoorCollectable2" parent="PixelPerfectScreenScaling/UnlockablePassage" instance=ExtResource("14_x1odf")]
+position = Vector2(36, -52)
 
-[node name="UnlockDoorCollectable3" parent="PixelPerfectScreenScaling" instance=ExtResource("14_x1odf")]
-position = Vector2(1860, 116)
+[node name="UnlockDoorCollectable3" parent="PixelPerfectScreenScaling/UnlockablePassage" instance=ExtResource("14_x1odf")]
+position = Vector2(-12, -76)
 
-[node name="UnlockDoorCollectable4" parent="PixelPerfectScreenScaling" instance=ExtResource("14_x1odf")]
-position = Vector2(1956, 132)
+[node name="UnlockDoorCollectable4" parent="PixelPerfectScreenScaling/UnlockablePassage" instance=ExtResource("14_x1odf")]
+position = Vector2(84, -60)
 
-[node name="UnlockDoorCollectable5" parent="PixelPerfectScreenScaling" instance=ExtResource("14_x1odf")]
-position = Vector2(2020, 140)
+[node name="UnlockDoorCollectable5" parent="PixelPerfectScreenScaling/UnlockablePassage" instance=ExtResource("14_x1odf")]
+position = Vector2(148, -52)
 
 [node name="WorldCam" parent="PixelPerfectScreenScaling" instance=ExtResource("7_a0w7n")]
 position = Vector2(128, 96)
