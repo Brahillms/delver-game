@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0vxhv"]
 size = Vector2(24, 24)
 
-[node name="TestTalker" type="Sprite2D"]
+[node name="EmployeeTalker" type="Sprite2D"]
 texture = ExtResource("1_dmmfp")
 flip_h = true
 script = ExtResource("2_dmmfp")
