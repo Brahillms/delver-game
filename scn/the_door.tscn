@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc6k58rx41s7c"]
+
+[ext_resource type="Texture2D" uid="uid://d4chyx1jscwqq" path="res://spr/unlockable_passage.webp" id="1_x7pga"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7pga"]
+size = Vector2(32, 16)
+
+[node name="TheDoor" type="Sprite2D"]
+rotation = 1.5708
+texture = ExtResource("1_x7pga")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_x7pga")
