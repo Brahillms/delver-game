@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnvb0kypldehe"]
+
+[ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_sxn1y"]
+[ext_resource type="Script" uid="uid://xt8ewhvx2v0d" path="res://scn/unlock_door_collectable.gd" id="2_pgsee"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sxn1y"]
+size = Vector2(8, 8)
+
+[node name="UnlockDoorCollectable" type="Sprite2D"]
+texture = ExtResource("1_sxn1y")
+script = ExtResource("2_pgsee")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_sxn1y")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
