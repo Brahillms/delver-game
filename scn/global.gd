@@ -6,6 +6,7 @@ signal all_collectables_collected
 
 
 var collected_count: int = 0
+var set_respawn_loc: Vector2
 
 
 func _ready() -> void:
