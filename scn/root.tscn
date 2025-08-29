@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bsm2hommt5155"]
+[gd_scene load_steps=20 format=3 uid="uid://bsm2hommt5155"]
 
 [ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_jl64g"]
 [ext_resource type="PackedScene" uid="uid://cfoqd3u8lif2p" path="res://scn/pixel_perfect_screen_scaling.tscn" id="1_w7qhr"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dn4w2n1ogplt0" path="res://scn/music.tscn" id="11_64rku"]
 [ext_resource type="PackedScene" uid="uid://bpionqvq3dthp" path="res://scn/unlockable_passage.tscn" id="13_g2d4s"]
 [ext_resource type="PackedScene" uid="uid://dnvb0kypldehe" path="res://scn/unlock_door_collectable.tscn" id="14_x1odf"]
+[ext_resource type="PackedScene" uid="uid://cc6k58rx41s7c" path="res://scn/the_door.tscn" id="15_mk53a"]
 [ext_resource type="PackedScene" uid="uid://gmjvjywmmktc" path="res://scn/talker_car.tscn" id="16_kuite"]
 
 [node name="Root" type="Node"]
@@ -37,199 +38,199 @@ position = Vector2(68, 120)
 
 [node name="SpikeTileset" parent="PixelPerfectScreenScaling" instance=ExtResource("5_yytp0")]
 
-[node name="BaseTileset" parent="PixelPerfectScreenScaling" instance=ExtResource("6_tul53")]
-
-[node name="TestTileHurt" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(452, 132)
 
-[node name="TestTileHurt2" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt2" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(460, 132)
 
-[node name="TestTileHurt3" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt3" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(884, 172)
 
-[node name="TestTileHurt4" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt4" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(892, 172)
 
-[node name="TestTileHurt5" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt5" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(900, 180)
 
-[node name="TestTileHurt6" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt6" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(908, 180)
 
-[node name="TestTileHurt7" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt7" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(916, 180)
 
-[node name="TestTileHurt8" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt8" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(924, 180)
 
-[node name="TestTileHurt9" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt9" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(1956, -44)
 
-[node name="TestTileHurt10" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt10" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(1964, -44)
 
-[node name="TestTileHurt11" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt11" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2084, -20)
 
-[node name="TestTileHurt12" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt12" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2092, -20)
 
-[node name="TestTileHurt13" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt13" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2100, -20)
 
-[node name="TestTileHurt14" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt14" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2108, -20)
 
-[node name="TestTileHurt15" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt15" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2116, -20)
 
-[node name="TestTileHurt16" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt16" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2124, -20)
 
-[node name="TestTileHurt17" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt17" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2132, -20)
 
-[node name="TestTileHurt18" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt18" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2140, -20)
 
-[node name="TestTileHurt19" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt19" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2172, -20)
 
-[node name="TestTileHurt20" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt20" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2180, -20)
 
-[node name="TestTileHurt21" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt21" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2188, -20)
 
-[node name="TestTileHurt22" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt22" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2196, -20)
 
-[node name="TestTileHurt23" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt23" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2220, -20)
 
-[node name="TestTileHurt24" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt24" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2252, -20)
 
-[node name="TestTileHurt25" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt25" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2260, -20)
 
-[node name="TestTileHurt26" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt26" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2268, -20)
 
-[node name="TestTileHurt27" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt27" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2276, -20)
 
-[node name="TestTileHurt28" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt28" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2156, 92)
 
-[node name="TestTileHurt29" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt29" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2164, 92)
 
-[node name="TestTileHurt30" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt30" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2284, 108)
 
-[node name="TestTileHurt31" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt31" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2292, 108)
 
-[node name="TestTileHurt32" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2060, 180)
+[node name="TestTileHurt32" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2060, 172)
 
-[node name="TestTileHurt33" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2068, 180)
+[node name="TestTileHurt33" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2068, 172)
 
-[node name="TestTileHurt34" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2076, 180)
+[node name="TestTileHurt34" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2076, 172)
 
-[node name="TestTileHurt35" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2084, 180)
+[node name="TestTileHurt35" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2084, 172)
 
-[node name="TestTileHurt36" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2092, 180)
+[node name="TestTileHurt36" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2092, 172)
 
-[node name="TestTileHurt37" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2100, 180)
+[node name="TestTileHurt37" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2100, 172)
 
-[node name="TestTileHurt38" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2108, 180)
+[node name="TestTileHurt38" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2108, 172)
 
-[node name="TestTileHurt39" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2116, 180)
+[node name="TestTileHurt39" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2116, 172)
 
-[node name="TestTileHurt40" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2124, 180)
+[node name="TestTileHurt40" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2124, 172)
 
-[node name="TestTileHurt41" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2132, 180)
+[node name="TestTileHurt41" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2132, 172)
 
-[node name="TestTileHurt42" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2140, 180)
+[node name="TestTileHurt42" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2140, 172)
 
-[node name="TestTileHurt43" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2148, 180)
+[node name="TestTileHurt43" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2148, 172)
 
-[node name="TestTileHurt44" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2156, 180)
+[node name="TestTileHurt44" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2156, 172)
 
-[node name="TestTileHurt45" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2164, 180)
+[node name="TestTileHurt45" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2164, 172)
 
-[node name="TestTileHurt46" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2172, 180)
+[node name="TestTileHurt46" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2172, 172)
 
-[node name="TestTileHurt47" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2180, 180)
+[node name="TestTileHurt47" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2180, 172)
 
-[node name="TestTileHurt48" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2188, 180)
+[node name="TestTileHurt48" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2188, 172)
 
-[node name="TestTileHurt49" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2196, 180)
+[node name="TestTileHurt49" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2196, 172)
 
-[node name="TestTileHurt50" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2204, 180)
+[node name="TestTileHurt50" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2204, 172)
 
-[node name="TestTileHurt51" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2212, 180)
+[node name="TestTileHurt51" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2212, 172)
 
-[node name="TestTileHurt52" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2220, 180)
+[node name="TestTileHurt52" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2220, 172)
 
-[node name="TestTileHurt53" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2228, 180)
+[node name="TestTileHurt53" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2228, 172)
 
-[node name="TestTileHurt54" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
-position = Vector2(2236, 180)
+[node name="TestTileHurt54" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2236, 172)
 
-[node name="TestTileHurt55" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt55" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2108, 100)
 
-[node name="TestTileHurt56" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt56" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2108, 60)
 
-[node name="TestTileHurt57" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt57" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2092, 52)
 
-[node name="TestTileHurt58" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt58" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2268, 180)
 
-[node name="TestTileHurt59" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt59" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2276, 180)
 
-[node name="TestTileHurt60" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt60" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2284, 180)
 
-[node name="TestTileHurt61" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt61" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2292, 180)
 
-[node name="TestTileHurt62" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt62" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2084, 52)
 
-[node name="TestTileHurt63" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt63" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2076, 52)
 
-[node name="TestTileHurt64" parent="PixelPerfectScreenScaling" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt64" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2068, 52)
+
+[node name="BaseTileset" parent="PixelPerfectScreenScaling" instance=ExtResource("6_tul53")]
 
 [node name="CarTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("16_kuite")]
 position = Vector2(36, 116)
@@ -260,6 +261,9 @@ position = Vector2(84, -60)
 
 [node name="UnlockDoorCollectable5" parent="PixelPerfectScreenScaling/UnlockablePassage" instance=ExtResource("14_x1odf")]
 position = Vector2(148, -52)
+
+[node name="TheDoor" parent="PixelPerfectScreenScaling" instance=ExtResource("15_mk53a")]
+position = Vector2(1792, 296)
 
 [node name="WorldCam" parent="PixelPerfectScreenScaling" instance=ExtResource("7_a0w7n")]
 position = Vector2(128, 96)
