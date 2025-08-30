@@ -36,6 +36,9 @@ position = Vector2(1196, 124)
 [node name="PropCar" parent="PixelPerfectScreenScaling" instance=ExtResource("3_seq05")]
 position = Vector2(36, 120)
 
+[node name="EmployeeTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("12_wqka6")]
+position = Vector2(1832, 292)
+
 [node name="Player" parent="PixelPerfectScreenScaling" instance=ExtResource("3_c2doo")]
 position = Vector2(68, 120)
 
@@ -245,9 +248,6 @@ position = Vector2(644, 116)
 
 [node name="CaveTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("7_rdmji")]
 position = Vector2(1196, 132)
-
-[node name="EmployeeTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("12_wqka6")]
-position = Vector2(1832, 292)
 
 [node name="CaveBarrier" parent="PixelPerfectScreenScaling" instance=ExtResource("9_m3qda")]
 position = Vector2(1260, 108)
