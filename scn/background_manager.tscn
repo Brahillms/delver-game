@@ -1,0 +1,79 @@
+[gd_scene load_steps=9 format=3 uid="uid://c0wqt6y1hbgm1"]
+
+[ext_resource type="Texture2D" uid="uid://crd2uby3ipytx" path="res://spr/desert_0002.webp" id="1_57i3i"]
+[ext_resource type="Texture2D" uid="uid://dqrxib561jx6f" path="res://spr/desert_0004.webp" id="1_hoca4"]
+[ext_resource type="Script" uid="uid://dq4ky3pwgnrka" path="res://scn/desert_bg.gd" id="1_kgn8w"]
+[ext_resource type="Texture2D" uid="uid://dr6grm3vetraq" path="res://spr/desert_0003.webp" id="1_tdbcp"]
+[ext_resource type="Texture2D" uid="uid://cg6wxg0exnauh" path="res://spr/desert_0005.webp" id="1_we2h5"]
+[ext_resource type="Texture2D" uid="uid://diurgnkndne7d" path="res://spr/desert_0000.webp" id="1_y26ec"]
+[ext_resource type="Texture2D" uid="uid://bvxrm3wsvs0tk" path="res://spr/desert_0001.webp" id="2_pqn77"]
+[ext_resource type="Script" uid="uid://d18k65f0ukyn2" path="res://scn/para_layer.gd" id="7_8l3oq"]
+
+[node name="BackgroundManager" type="Node2D"]
+
+[node name="DesertBG" type="ParallaxBackground" parent="."]
+script = ExtResource("1_kgn8w")
+
+[node name="0005" type="ParallaxLayer" parent="DesertBG"]
+z_index = -6
+texture_filter = 1
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="DesertBG/0005"]
+texture = ExtResource("1_we2h5")
+centered = false
+
+[node name="0004" type="ParallaxLayer" parent="DesertBG"]
+z_index = -5
+texture_filter = 1
+motion_scale = Vector2(0.05, 1)
+motion_mirroring = Vector2(256, 0)
+script = ExtResource("7_8l3oq")
+
+[node name="Sprite2D" type="Sprite2D" parent="DesertBG/0004"]
+texture = ExtResource("1_hoca4")
+centered = false
+
+[node name="0003" type="ParallaxLayer" parent="DesertBG"]
+z_index = -4
+texture_filter = 1
+motion_scale = Vector2(0.15, 1)
+motion_mirroring = Vector2(256, 0)
+script = ExtResource("7_8l3oq")
+
+[node name="Sprite2D" type="Sprite2D" parent="DesertBG/0003"]
+texture = ExtResource("1_tdbcp")
+centered = false
+
+[node name="0002" type="ParallaxLayer" parent="DesertBG"]
+z_index = -3
+texture_filter = 1
+motion_scale = Vector2(0.25, 1)
+motion_mirroring = Vector2(256, 0)
+script = ExtResource("7_8l3oq")
+
+[node name="Sprite2D" type="Sprite2D" parent="DesertBG/0002"]
+texture = ExtResource("1_57i3i")
+centered = false
+
+[node name="0001" type="ParallaxLayer" parent="DesertBG"]
+z_index = -2
+texture_filter = 1
+motion_scale = Vector2(0.35, 1)
+motion_mirroring = Vector2(256, 0)
+script = ExtResource("7_8l3oq")
+
+[node name="Sprite2D" type="Sprite2D" parent="DesertBG/0001"]
+texture = ExtResource("2_pqn77")
+centered = false
+
+[node name="0000" type="ParallaxLayer" parent="DesertBG"]
+z_index = -1
+texture_filter = 1
+motion_scale = Vector2(0.45, 1)
+motion_mirroring = Vector2(256, 0)
+script = ExtResource("7_8l3oq")
+
+[node name="Sprite2D" type="Sprite2D" parent="DesertBG/0000"]
+texture = ExtResource("1_y26ec")
+centered = false

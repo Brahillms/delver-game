@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bsm2hommt5155"]
+[gd_scene load_steps=22 format=3 uid="uid://bsm2hommt5155"]
 
 [ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_jl64g"]
 [ext_resource type="PackedScene" uid="uid://cfoqd3u8lif2p" path="res://scn/pixel_perfect_screen_scaling.tscn" id="1_w7qhr"]
@@ -20,11 +20,15 @@
 [ext_resource type="PackedScene" uid="uid://dnvb0kypldehe" path="res://scn/unlock_door_collectable.tscn" id="14_x1odf"]
 [ext_resource type="PackedScene" uid="uid://cc6k58rx41s7c" path="res://scn/the_door.tscn" id="15_mk53a"]
 [ext_resource type="PackedScene" uid="uid://gmjvjywmmktc" path="res://scn/talker_car.tscn" id="16_kuite"]
+[ext_resource type="PackedScene" uid="uid://c0wqt6y1hbgm1" path="res://scn/background_manager.tscn" id="20_00e6a"]
 
 [node name="Root" type="Node"]
 
 [node name="PixelPerfectScreenScaling" parent="." instance=ExtResource("1_w7qhr")]
 unique_name_in_owner = true
+
+[node name="BackgroundManager" parent="PixelPerfectScreenScaling" instance=ExtResource("20_00e6a")]
+position = Vector2(0, -16)
 
 [node name="CaveEntrance" parent="PixelPerfectScreenScaling" instance=ExtResource("2_fm7ow")]
 position = Vector2(1196, 124)
