@@ -361,8 +361,6 @@ texture = ExtResource("1_jl64g")
 unique_name_in_owner = true
 position = Vector2(4, -68)
 
-[node name="FirstMenu" parent="PixelPerfectScreenScaling" instance=ExtResource("23_efex5")]
-
 [node name="Spawn" type="StaticBody2D" parent="PixelPerfectScreenScaling"]
 position = Vector2(92, 120)
 collision_layer = 0
@@ -374,6 +372,8 @@ shape = SubResource("RectangleShape2D_sm2pt")
 [node name="ForemanOffice" type="Sprite2D" parent="PixelPerfectScreenScaling"]
 position = Vector2(2504, 328)
 texture = ExtResource("22_efex5")
+
+[node name="FirstMenu" parent="PixelPerfectScreenScaling" instance=ExtResource("23_efex5")]
 
 [node name="Music" parent="." instance=ExtResource("11_64rku")]
 unique_name_in_owner = true
