@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bsm2hommt5155"]
+[gd_scene load_steps=27 format=3 uid="uid://bsm2hommt5155"]
 
 [ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_jl64g"]
 [ext_resource type="PackedScene" uid="uid://cfoqd3u8lif2p" path="res://scn/pixel_perfect_screen_scaling.tscn" id="1_w7qhr"]
@@ -24,8 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://c0wqt6y1hbgm1" path="res://scn/background_manager.tscn" id="20_00e6a"]
 [ext_resource type="Texture2D" uid="uid://b53s1xn8eyf0n" path="res://spr/foreman_office.webp" id="22_efex5"]
 [ext_resource type="PackedScene" uid="uid://ch0yy8ah7r4tx" path="res://scn/first_menu.tscn" id="23_efex5"]
-[ext_resource type="AudioStream" uid="uid://bomxsh8ip14o6" path="res://mus/august.wav" id="25_w0cbq"]
-[ext_resource type="Script" uid="uid://dly5g14whfyq8" path="res://scn/credits_music.gd" id="26_7ib18"]
+[ext_resource type="PackedScene" uid="uid://c4tyhmowjqv2d" path="res://scn/credits_menu.tscn" id="24_7ib18"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sm2pt"]
 size = Vector2(8, 16)
@@ -375,9 +374,8 @@ texture = ExtResource("22_efex5")
 
 [node name="FirstMenu" parent="PixelPerfectScreenScaling" instance=ExtResource("23_efex5")]
 
+[node name="CreditsMenu" parent="PixelPerfectScreenScaling" instance=ExtResource("24_7ib18")]
+position = Vector2(2304, 192)
+
 [node name="Music" parent="." instance=ExtResource("11_64rku")]
 unique_name_in_owner = true
-
-[node name="CreditsMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("25_w0cbq")
-script = ExtResource("26_7ib18")

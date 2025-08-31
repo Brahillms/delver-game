@@ -29,7 +29,7 @@ func _physics_process(_delta: float) -> void:
 		await %TextBoxManager.display_textbox(TextBoxManager.Init.IDLE, "player", "flabbergasted", "...")
 		await %TextBoxManager.display_textbox(TextBoxManager.Init.IDLE, "player", "frazzled", "...")
 		await %TextBoxManager.display_textbox(TextBoxManager.Init.IDLE, "player", "pensive", "Okay, if you say so.")
-		await %TextBoxManager.display_textbox(TextBoxManager.Init.CLOSING, "player", "frazzled", "I'll come back for you later, brother.")
+		await %TextBoxManager.display_textbox(TextBoxManager.Init.CLOSING, "player", "pensive", "I'll come back for you later, brother.")
 		Global.roll_credits.emit()
 
 
