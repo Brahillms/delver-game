@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bsm2hommt5155"]
+[gd_scene load_steps=28 format=3 uid="uid://bsm2hommt5155"]
 
 [ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_jl64g"]
 [ext_resource type="PackedScene" uid="uid://cfoqd3u8lif2p" path="res://scn/pixel_perfect_screen_scaling.tscn" id="1_w7qhr"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bpionqvq3dthp" path="res://scn/unlockable_passage.tscn" id="13_g2d4s"]
 [ext_resource type="PackedScene" uid="uid://dnvb0kypldehe" path="res://scn/unlock_door_collectable.tscn" id="14_x1odf"]
 [ext_resource type="PackedScene" uid="uid://cc6k58rx41s7c" path="res://scn/the_door.tscn" id="15_mk53a"]
+[ext_resource type="PackedScene" uid="uid://covymy22rtm63" path="res://scn/talker_sign.tscn" id="15_w0cbq"]
 [ext_resource type="PackedScene" uid="uid://gmjvjywmmktc" path="res://scn/talker_car.tscn" id="16_kuite"]
 [ext_resource type="PackedScene" uid="uid://c0wqt6y1hbgm1" path="res://scn/background_manager.tscn" id="20_00e6a"]
 [ext_resource type="Texture2D" uid="uid://b53s1xn8eyf0n" path="res://spr/foreman_office.webp" id="22_efex5"]
@@ -299,6 +300,9 @@ position = Vector2(644, 116)
 [node name="CaveTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("7_rdmji")]
 position = Vector2(1196, 132)
 
+[node name="SignTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("15_w0cbq")]
+position = Vector2(1140, 132)
+
 [node name="InvisBarrier" parent="PixelPerfectScreenScaling" instance=ExtResource("9_m3qda")]
 position = Vector2(1260, 108)
 
@@ -315,7 +319,7 @@ position = Vector2(1872, 192)
 position = Vector2(44, -156)
 
 [node name="UnlockDoorCollectable2" parent="PixelPerfectScreenScaling/UnlockablePassage" instance=ExtResource("14_x1odf")]
-position = Vector2(36, -52)
+position = Vector2(36, -68)
 
 [node name="UnlockDoorCollectable3" parent="PixelPerfectScreenScaling/UnlockablePassage" instance=ExtResource("14_x1odf")]
 position = Vector2(-12, -76)
