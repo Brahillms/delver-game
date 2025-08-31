@@ -1,9 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://bsm2hommt5155"]
+[gd_scene load_steps=24 format=3 uid="uid://bsm2hommt5155"]
 
 [ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_jl64g"]
 [ext_resource type="PackedScene" uid="uid://cfoqd3u8lif2p" path="res://scn/pixel_perfect_screen_scaling.tscn" id="1_w7qhr"]
 [ext_resource type="PackedScene" uid="uid://b3oyl1e2mjkr7" path="res://scn/cave_entrance.tscn" id="2_fm7ow"]
-[ext_resource type="PackedScene" uid="uid://14xlif05ojdb" path="res://scn/player.tscn" id="3_c2doo"]
 [ext_resource type="PackedScene" uid="uid://dg67w4dmiokuh" path="res://scn/prop_car.tscn" id="3_seq05"]
 [ext_resource type="PackedScene" uid="uid://33lg4tvfugxx" path="res://scn/respawn_manager.tscn" id="3_sm2pt"]
 [ext_resource type="PackedScene" uid="uid://c1xoa0dkii3pp" path="res://scn/test_tile_hurt.tscn" id="4_50olh"]
@@ -22,6 +21,10 @@
 [ext_resource type="PackedScene" uid="uid://cc6k58rx41s7c" path="res://scn/the_door.tscn" id="15_mk53a"]
 [ext_resource type="PackedScene" uid="uid://gmjvjywmmktc" path="res://scn/talker_car.tscn" id="16_kuite"]
 [ext_resource type="PackedScene" uid="uid://c0wqt6y1hbgm1" path="res://scn/background_manager.tscn" id="20_00e6a"]
+[ext_resource type="PackedScene" uid="uid://ch0yy8ah7r4tx" path="res://scn/first_menu.tscn" id="23_efex5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sm2pt"]
+size = Vector2(8, 16)
 
 [node name="Root" type="Node"]
 
@@ -50,6 +53,7 @@ position = Vector2(2236, 32)
 position = Vector2(2108, 320)
 
 [node name="CaveEntrance" parent="PixelPerfectScreenScaling" instance=ExtResource("2_fm7ow")]
+z_index = -2
 position = Vector2(1196, 124)
 
 [node name="PropCar" parent="PixelPerfectScreenScaling" instance=ExtResource("3_seq05")]
@@ -57,9 +61,6 @@ position = Vector2(36, 120)
 
 [node name="EmployeeTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("12_wqka6")]
 position = Vector2(1832, 292)
-
-[node name="Player" parent="PixelPerfectScreenScaling" instance=ExtResource("3_c2doo")]
-position = Vector2(68, 120)
 
 [node name="SandTileset" parent="PixelPerfectScreenScaling" instance=ExtResource("5_50olh")]
 
@@ -292,8 +293,11 @@ position = Vector2(644, 116)
 [node name="CaveTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("7_rdmji")]
 position = Vector2(1196, 132)
 
-[node name="CaveBarrier" parent="PixelPerfectScreenScaling" instance=ExtResource("9_m3qda")]
+[node name="InvisBarrier" parent="PixelPerfectScreenScaling" instance=ExtResource("9_m3qda")]
 position = Vector2(1260, 108)
+
+[node name="InvisBarrier2" parent="PixelPerfectScreenScaling" instance=ExtResource("9_m3qda")]
+position = Vector2(4, 92)
 
 [node name="UnlockablePassage" parent="PixelPerfectScreenScaling" instance=ExtResource("13_g2d4s")]
 position = Vector2(1872, 192)
@@ -346,6 +350,16 @@ texture = ExtResource("1_jl64g")
 [node name="TextBoxManager" parent="PixelPerfectScreenScaling/WorldCam" instance=ExtResource("8_d3gv8")]
 unique_name_in_owner = true
 position = Vector2(4, -68)
+
+[node name="FirstMenu" parent="PixelPerfectScreenScaling" instance=ExtResource("23_efex5")]
+
+[node name="Spawn" type="StaticBody2D" parent="PixelPerfectScreenScaling"]
+position = Vector2(92, 120)
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PixelPerfectScreenScaling/Spawn"]
+shape = SubResource("RectangleShape2D_sm2pt")
 
 [node name="Music" parent="." instance=ExtResource("11_64rku")]
 unique_name_in_owner = true

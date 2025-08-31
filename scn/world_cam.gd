@@ -24,6 +24,7 @@ func _advance(dir: Vector2i) -> void:
 
 func _ready() -> void:
 	Global.entered_cave.connect(_on_entered_cave)
+	Global.screen_scale_intitialized.connect(_on_screen_scale_initialized)
 
 
 func _on_entered_cave() -> void:
@@ -48,3 +49,10 @@ func _on_advance_screen_b_body_entered(_body: Node2D) -> void:
 func _on_advance_screen_l_body_entered(_body: Node2D) -> void:
 	if not _is_advancing:
 		await _advance(Vector2i(-1, 0))
+
+
+func _on_screen_scale_initialized() -> void:
+	_is_advancing = true
+	$Timer.start()
+	await $Timer.timeout
+	_is_advancing = false

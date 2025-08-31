@@ -1,0 +1,135 @@
+[gd_scene load_steps=14 format=3 uid="uid://ch0yy8ah7r4tx"]
+
+[ext_resource type="Script" uid="uid://dibo5n8oc70ui" path="res://scn/first_menu.gd" id="1_nary6"]
+[ext_resource type="Texture2D" uid="uid://3gtuvkt0q30k" path="res://spr/menu_keys.webp" id="2_fkb7c"]
+[ext_resource type="FontFile" uid="uid://c0ogvtfqt7sbx" path="res://fnt/PublicPixel.otf" id="3_fhbch"]
+[ext_resource type="Texture2D" uid="uid://shdhq2tn174t" path="res://spr/ok_button.webp" id="4_hxagp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhbch"]
+atlas = ExtResource("2_fkb7c")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxagp"]
+atlas = ExtResource("2_fkb7c")
+region = Rect2(0, 24, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cdm82"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhbch")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxagp")
+}],
+"loop": true,
+"name": &"pressed",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkb7c"]
+atlas = ExtResource("2_fkb7c")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdm82"]
+atlas = ExtResource("2_fkb7c")
+region = Rect2(16, 24, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jxpd5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkb7c")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdm82")
+}],
+"loop": true,
+"name": &"pressed",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxpd5"]
+atlas = ExtResource("4_hxagp")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8q2s"]
+atlas = ExtResource("4_hxagp")
+region = Rect2(0, 16, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ounk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxpd5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8q2s")
+}],
+"loop": true,
+"name": &"pressed",
+"speed": 5.0
+}]
+
+[node name="FirstMenu" type="Node2D"]
+script = ExtResource("1_nary6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 256.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+
+[node name="KeyO" type="AnimatedSprite2D" parent="."]
+position = Vector2(96, 80)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_cdm82")
+animation = &"pressed"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="KeyO"]
+offset_left = -7.5
+offset_top = -32.0
+offset_right = 8.5
+offset_bottom = -16.0
+theme_override_fonts/normal_font = ExtResource("3_fhbch")
+text = "+"
+scroll_active = false
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="KeyP" type="AnimatedSprite2D" parent="."]
+position = Vector2(160, 80)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_jxpd5")
+animation = &"pressed"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="KeyP"]
+offset_left = -7.5
+offset_top = -32.0
+offset_right = 8.5
+offset_bottom = -16.0
+theme_override_fonts/normal_font = ExtResource("3_fhbch")
+text = "-"
+scroll_active = false
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="OKButton" type="AnimatedSprite2D" parent="."]
+position = Vector2(128, 144)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_3ounk")
+animation = &"pressed"

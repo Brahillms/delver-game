@@ -9,6 +9,7 @@
 size = Vector2(24, 24)
 
 [node name="EmployeeTalker" type="Sprite2D"]
+z_index = -2
 texture = ExtResource("1_dmmfp")
 flip_h = true
 script = ExtResource("2_dmmfp")

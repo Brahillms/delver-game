@@ -9,7 +9,7 @@ var _is_respawning: bool = false
 # I don't know why this works and not just putting %PixelPerfectScreenScaling
 # as there's no way to guaruntee the grandparent node is the CanvasGroup node
 @onready var pixel_perfect = get_node("../..")
-@onready var textbox_manager = get_parent().get_node("%TextBoxManager")
+@onready var textbox_manager = get_node("/root/Root/PixelPerfectScreenScaling/WorldCam/TextBoxManager")
 
 
 func player_jump() -> void:
@@ -22,6 +22,7 @@ func player_jump() -> void:
 
 func _ready() -> void:
 	get_parent().has_died.connect(_on_has_died)
+	global_position = get_node("/root/Root/PixelPerfectScreenScaling/Spawn").global_position
 
 
 func _physics_process(delta: float) -> void:
