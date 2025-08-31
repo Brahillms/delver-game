@@ -1,14 +1,8 @@
 extends AudioStreamPlayer
 
-
 func _ready() -> void:
-	Global.entered_cave.connect(_on_entered_cave)
 	Global.roll_credits.connect(_on_roll_credits)
 
 
-func _on_entered_cave() -> void:
-	play()
-
-
 func _on_roll_credits() -> void:
-	stop()
+	play()
