@@ -1,11 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://14xlif05ojdb"]
+[gd_scene load_steps=21 format=3 uid="uid://14xlif05ojdb"]
 
 [ext_resource type="Script" uid="uid://bjpk00d5gbo7q" path="res://scn/player.gd" id="1_3v80w"]
 [ext_resource type="Texture2D" uid="uid://ddosm1gfpu1n0" path="res://spr/hitbox.webp" id="1_386vx"]
 [ext_resource type="Script" uid="uid://dci3sn0tbol17" path="res://scn/player_move.gd" id="2_diy2p"]
 [ext_resource type="Texture2D" uid="uid://b36yjlhji3ppp" path="res://spr/hurtbox.webp" id="2_dltx8"]
 [ext_resource type="Texture2D" uid="uid://c0uxancuoxn86" path="res://spr/player_fall.webp" id="3_ajiww"]
-[ext_resource type="Script" uid="uid://w8sxdsebhba2" path="res://scn/hurt.gd" id="3_eoiiq"]
 [ext_resource type="Texture2D" uid="uid://bmnthfr7wmg54" path="res://spr/player_idle.webp" id="3_pkges"]
 [ext_resource type="Texture2D" uid="uid://dawxfm56aba5i" path="res://spr/player_jump.webp" id="4_4qvgc"]
 [ext_resource type="Texture2D" uid="uid://df2ymwepoiuff" path="res://spr/player_walk.webp" id="4_m1cso"]
@@ -109,7 +108,6 @@ debug_color = Color(0, 1, 0, 0.215686)
 
 [node name="HurtboxManager" type="Area2D" parent="HitboxManager"]
 collision_mask = 4
-script = ExtResource("3_eoiiq")
 
 [node name="PlayerHurtbox" type="Sprite2D" parent="HitboxManager/HurtboxManager"]
 visible = false
@@ -118,12 +116,6 @@ texture = ExtResource("2_dltx8")
 [node name="HurtboxCollider" type="CollisionShape2D" parent="HitboxManager/HurtboxManager"]
 shape = SubResource("RectangleShape2D_diy2p")
 debug_color = Color(1, 0, 0, 0.215686)
-
-[node name="HurtSFX" type="AudioStreamPlayer" parent="HitboxManager/HurtboxManager"]
-stream = ExtResource("11_rr467")
-
-[node name="GameOverSFX" type="AudioStreamPlayer" parent="HitboxManager/HurtboxManager"]
-stream = ExtResource("12_7y8th")
 
 [node name="TimerWJ" type="Timer" parent="."]
 unique_name_in_owner = true
@@ -134,6 +126,12 @@ one_shot = true
 unique_name_in_owner = true
 wait_time = 0.15
 one_shot = true
+
+[node name="GameOverSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_7y8th")
+
+[node name="HurtSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_rr467")
 
 [node name="JumpSFX" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
@@ -150,6 +148,6 @@ unique_name_in_owner = true
 stream = ExtResource("15_dhgk1")
 autoplay = true
 
-[connection signal="area_entered" from="HitboxManager/HurtboxManager" to="HitboxManager/HurtboxManager" method="_on_area_entered"]
+[connection signal="area_entered" from="HitboxManager/HurtboxManager" to="." method="_on_hurtbox_manager_area_entered"]
 [connection signal="timeout" from="TimerWJ" to="HitboxManager" method="_on_timer_wj_timeout"]
 [connection signal="timeout" from="TimerCoyote" to="HitboxManager" method="_on_timer_coyote_timeout"]

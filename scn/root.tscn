@@ -1,10 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://bsm2hommt5155"]
+[gd_scene load_steps=23 format=3 uid="uid://bsm2hommt5155"]
 
 [ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_jl64g"]
 [ext_resource type="PackedScene" uid="uid://cfoqd3u8lif2p" path="res://scn/pixel_perfect_screen_scaling.tscn" id="1_w7qhr"]
 [ext_resource type="PackedScene" uid="uid://b3oyl1e2mjkr7" path="res://scn/cave_entrance.tscn" id="2_fm7ow"]
 [ext_resource type="PackedScene" uid="uid://14xlif05ojdb" path="res://scn/player.tscn" id="3_c2doo"]
 [ext_resource type="PackedScene" uid="uid://dg67w4dmiokuh" path="res://scn/prop_car.tscn" id="3_seq05"]
+[ext_resource type="PackedScene" uid="uid://33lg4tvfugxx" path="res://scn/respawn_manager.tscn" id="3_sm2pt"]
 [ext_resource type="PackedScene" uid="uid://c1xoa0dkii3pp" path="res://scn/test_tile_hurt.tscn" id="4_50olh"]
 [ext_resource type="PackedScene" uid="uid://8avdwlfhjx1p" path="res://scn/sand_tileset.tscn" id="5_50olh"]
 [ext_resource type="PackedScene" uid="uid://csaw87aqrnml4" path="res://scn/spike_tileset.tscn" id="5_yytp0"]
@@ -29,6 +30,24 @@ unique_name_in_owner = true
 
 [node name="BackgroundManager" parent="PixelPerfectScreenScaling" instance=ExtResource("20_00e6a")]
 position = Vector2(0, -16)
+
+[node name="RespawnManager" parent="PixelPerfectScreenScaling" instance=ExtResource("3_sm2pt")]
+position = Vector2(288, 112)
+
+[node name="RespawnManager2" parent="PixelPerfectScreenScaling" instance=ExtResource("3_sm2pt")]
+position = Vector2(804, 144)
+
+[node name="RespawnManager3" parent="PixelPerfectScreenScaling" instance=ExtResource("3_sm2pt")]
+position = Vector2(1820, -56)
+
+[node name="RespawnManager4" parent="PixelPerfectScreenScaling" instance=ExtResource("3_sm2pt")]
+position = Vector2(2060, -32)
+
+[node name="RespawnManager5" parent="PixelPerfectScreenScaling" instance=ExtResource("3_sm2pt")]
+position = Vector2(2236, 32)
+
+[node name="RespawnManager6" parent="PixelPerfectScreenScaling" instance=ExtResource("3_sm2pt")]
+position = Vector2(2012, 40)
 
 [node name="CaveEntrance" parent="PixelPerfectScreenScaling" instance=ExtResource("2_fm7ow")]
 position = Vector2(1196, 124)

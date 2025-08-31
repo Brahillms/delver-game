@@ -6,7 +6,7 @@ signal all_collectables_collected
 signal scale_factor_updated
 
 var collected_count: int = 0
-var set_respawn_loc: Vector2
+var respawn_loc: Vector2
 
 
 func _ready() -> void:

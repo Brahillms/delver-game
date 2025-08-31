@@ -4,6 +4,7 @@ extends CharacterBody2D
 
 var _perform_wall_jump: bool = false
 var _perform_coyote_jump: bool = false
+var _is_respawning: bool = false
 
 # I don't know why this works and not just putting %PixelPerfectScreenScaling
 # as there's no way to guaruntee the grandparent node is the CanvasGroup node
@@ -19,6 +20,10 @@ func player_jump() -> void:
 	%PlayerAnims.play("jump")
 
 
+func _ready() -> void:
+	get_parent().has_died.connect(_on_has_died)
+
+
 func _physics_process(delta: float) -> void:
 
 	# Add the gravity.
@@ -26,7 +31,11 @@ func _physics_process(delta: float) -> void:
 		velocity += (get_gravity() * delta) * pixel_perfect.scale_factor
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not textbox_manager.is_currently_talking:
+	if (Input.is_action_just_pressed("ui_accept")
+	and is_on_floor()
+	and not textbox_manager.is_currently_talking
+	and not _is_respawning
+	):
 		player_jump()
 
 
@@ -42,10 +51,16 @@ func _physics_process(delta: float) -> void:
 		%PlayerAnims.play("walk")
 
 
-	if direction and not _perform_wall_jump and not textbox_manager.is_currently_talking:
+	if (direction
+	and not _perform_wall_jump
+	and not textbox_manager.is_currently_talking
+	and not _is_respawning
+	):
 		velocity.x = (direction * Player.SPEED) * pixel_perfect.scale_factor
 
-	elif not _perform_wall_jump and not textbox_manager.is_currently_talking:
+	elif (not _perform_wall_jump
+	and not textbox_manager.is_currently_talking
+	and not _is_respawning):
 		velocity.x = move_toward(velocity.x, 0, Player.SPEED)
 
 # Player sprite looking directions
@@ -119,3 +134,10 @@ func _on_timer_wj_timeout() -> void:
 
 func _on_timer_coyote_timeout() -> void:
 	_perform_coyote_jump = false
+
+
+func _on_has_died() -> void:
+	_is_respawning = true
+	await get_node("../HurtSFX").finished
+	global_position = Vector2.ZERO + (Global.respawn_loc * pixel_perfect.scale_factor)
+	_is_respawning = false
