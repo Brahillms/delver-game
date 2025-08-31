@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bsm2hommt5155"]
+[gd_scene load_steps=27 format=3 uid="uid://bsm2hommt5155"]
 
 [ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_jl64g"]
 [ext_resource type="PackedScene" uid="uid://cfoqd3u8lif2p" path="res://scn/pixel_perfect_screen_scaling.tscn" id="1_w7qhr"]
@@ -10,7 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://csaw87aqrnml4" path="res://scn/spike_tileset.tscn" id="5_yytp0"]
 [ext_resource type="PackedScene" uid="uid://dty11avsj5fsv" path="res://scn/base_tileset.tscn" id="6_tul53"]
 [ext_resource type="PackedScene" uid="uid://duo8gyamq7gdv" path="res://scn/world_cam.tscn" id="7_a0w7n"]
+[ext_resource type="Script" uid="uid://co6ixaqspwyqd" path="res://scn/talker_foreman.gd" id="7_r77eb"]
 [ext_resource type="PackedScene" uid="uid://d33h2pin6ilve" path="res://scn/talker_cave.tscn" id="7_rdmji"]
+[ext_resource type="PackedScene" uid="uid://b6ro82md6cp0o" path="res://scn/talker_foreman.tscn" id="8_328m4"]
 [ext_resource type="PackedScene" uid="uid://cx2sg4vekkfp0" path="res://scn/text_box_manager.tscn" id="8_d3gv8"]
 [ext_resource type="PackedScene" uid="uid://crurq58joxeq4" path="res://scn/talker_nothing.tscn" id="8_fm7ow"]
 [ext_resource type="PackedScene" uid="uid://bo5uorse1kv2g" path="res://scn/cave_barrier.tscn" id="9_m3qda"]
@@ -21,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://cc6k58rx41s7c" path="res://scn/the_door.tscn" id="15_mk53a"]
 [ext_resource type="PackedScene" uid="uid://gmjvjywmmktc" path="res://scn/talker_car.tscn" id="16_kuite"]
 [ext_resource type="PackedScene" uid="uid://c0wqt6y1hbgm1" path="res://scn/background_manager.tscn" id="20_00e6a"]
+[ext_resource type="Texture2D" uid="uid://b53s1xn8eyf0n" path="res://spr/foreman_office.webp" id="22_efex5"]
 [ext_resource type="PackedScene" uid="uid://ch0yy8ah7r4tx" path="res://scn/first_menu.tscn" id="23_efex5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sm2pt"]
@@ -61,6 +64,10 @@ position = Vector2(36, 120)
 
 [node name="EmployeeTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("12_wqka6")]
 position = Vector2(1832, 292)
+script = ExtResource("7_r77eb")
+
+[node name="ForemanTalker" parent="PixelPerfectScreenScaling" instance=ExtResource("8_328m4")]
+position = Vector2(2460, 332)
 
 [node name="SandTileset" parent="PixelPerfectScreenScaling" instance=ExtResource("5_50olh")]
 
@@ -360,6 +367,10 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PixelPerfectScreenScaling/Spawn"]
 shape = SubResource("RectangleShape2D_sm2pt")
+
+[node name="ForemanOffice" type="Sprite2D" parent="PixelPerfectScreenScaling"]
+position = Vector2(2504, 328)
+texture = ExtResource("22_efex5")
 
 [node name="Music" parent="." instance=ExtResource("11_64rku")]
 unique_name_in_owner = true

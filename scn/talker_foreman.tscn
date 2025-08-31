@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6ro82md6cp0o"]
+
+[ext_resource type="Texture2D" uid="uid://bitfqdbui2f0g" path="res://spr/all_smiles.webp" id="1_dv8m0"]
+[ext_resource type="Script" uid="uid://co6ixaqspwyqd" path="res://scn/talker_foreman.gd" id="2_dv8m0"]
+[ext_resource type="Texture2D" uid="uid://csr8mcf4rq4vd" path="res://spr/speech_bubble.webp" id="3_3v1ae"]
+[ext_resource type="Script" uid="uid://dqt3rlw2518h5" path="res://scn/speech_bubble.gd" id="4_vwkgo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vxhv"]
+size = Vector2(24, 24)
+
+[node name="ForemanTalker" type="Sprite2D"]
+z_index = -2
+texture = ExtResource("1_dv8m0")
+script = ExtResource("2_dv8m0")
+
+[node name="TalkerHitboxManager" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="TalkerHitbox" type="CollisionShape2D" parent="TalkerHitboxManager"]
+shape = SubResource("RectangleShape2D_0vxhv")
+
+[node name="SpeechBubble" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("3_3v1ae")
+script = ExtResource("4_vwkgo")
+
+[connection signal="body_entered" from="TalkerHitboxManager" to="." method="_on_talker_hitbox_manager_body_entered"]
+[connection signal="body_entered" from="TalkerHitboxManager" to="SpeechBubble" method="_on_talker_hitbox_manager_body_entered"]
+[connection signal="body_exited" from="TalkerHitboxManager" to="." method="_on_talker_hitbox_manager_body_exited"]
+[connection signal="body_exited" from="TalkerHitboxManager" to="SpeechBubble" method="_on_talker_hitbox_manager_body_exited"]
