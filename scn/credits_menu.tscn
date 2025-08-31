@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4tyhmowjqv2d"]
+
+[ext_resource type="FontFile" uid="uid://c0ogvtfqt7sbx" path="res://fnt/PublicPixel.otf" id="1_enggk"]
+
+[node name="CreditsMenu" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 256.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 256.0
+offset_bottom = 192.0
+theme_override_fonts/normal_font = ExtResource("1_enggk")
