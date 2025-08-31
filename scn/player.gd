@@ -34,6 +34,7 @@ func _hurt() -> void:
 
 func _ready() -> void:
 	Global.entered_cave.connect(_on_entered_cave)
+	Global.roll_credits.connect(_on_roll_credits)
 
 
 func _on_entered_cave() -> void:
@@ -42,3 +43,7 @@ func _on_entered_cave() -> void:
 
 func _on_hurtbox_manager_area_entered(_area: Area2D) -> void:
 	_hurt()
+
+
+func _on_roll_credits() -> void:
+	queue_free()
