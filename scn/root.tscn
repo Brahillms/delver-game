@@ -32,7 +32,7 @@ unique_name_in_owner = true
 position = Vector2(0, -16)
 
 [node name="RespawnManager" parent="PixelPerfectScreenScaling" instance=ExtResource("3_sm2pt")]
-position = Vector2(288, 112)
+position = Vector2(284, 112)
 
 [node name="RespawnManager2" parent="PixelPerfectScreenScaling" instance=ExtResource("3_sm2pt")]
 position = Vector2(804, 144)
@@ -47,7 +47,7 @@ position = Vector2(2060, -32)
 position = Vector2(2236, 32)
 
 [node name="RespawnManager6" parent="PixelPerfectScreenScaling" instance=ExtResource("3_sm2pt")]
-position = Vector2(2012, 40)
+position = Vector2(2108, 320)
 
 [node name="CaveEntrance" parent="PixelPerfectScreenScaling" instance=ExtResource("2_fm7ow")]
 position = Vector2(1196, 124)
@@ -256,6 +256,30 @@ position = Vector2(2076, 52)
 
 [node name="TestTileHurt64" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2068, 52)
+
+[node name="TestTileHurt65" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2140, 284)
+
+[node name="TestTileHurt66" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2148, 284)
+
+[node name="TestTileHurt67" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2180, 332)
+
+[node name="TestTileHurt68" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2188, 332)
+
+[node name="TestTileHurt69" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2196, 332)
+
+[node name="TestTileHurt70" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2204, 332)
+
+[node name="TestTileHurt71" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2212, 332)
+
+[node name="TestTileHurt72" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+position = Vector2(2220, 332)
 
 [node name="BaseTileset" parent="PixelPerfectScreenScaling" instance=ExtResource("6_tul53")]
 
