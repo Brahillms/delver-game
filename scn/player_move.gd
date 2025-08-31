@@ -60,7 +60,7 @@ func _physics_process(delta: float) -> void:
 
 	elif (not _perform_wall_jump
 	and not textbox_manager.is_currently_talking
-	and not _is_respawning):
+	):
 		velocity.x = move_toward(velocity.x, 0, Player.SPEED)
 
 # Player sprite looking directions
