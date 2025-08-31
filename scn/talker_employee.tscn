@@ -15,7 +15,7 @@ flip_h = true
 script = ExtResource("2_dmmfp")
 
 [node name="TalkerHitboxManager" type="Area2D" parent="."]
-collision_layer = 8
+collision_layer = 0
 
 [node name="TalkerHitbox" type="CollisionShape2D" parent="TalkerHitboxManager"]
 shape = SubResource("RectangleShape2D_0vxhv")

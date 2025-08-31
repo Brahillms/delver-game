@@ -20,9 +20,11 @@ func _physics_process(_delta: float) -> void:
 
 
 
-func _on_talker_hitbox_manager_body_entered(_body: Node2D) -> void:
-	is_within_talking_range = true
+func _on_talker_hitbox_manager_body_entered(body: Node2D) -> void:
+	if body.get_parent() is Player:
+		is_within_talking_range = true
 
 
-func _on_talker_hitbox_manager_body_exited(_body: Node2D) -> void:
-	is_within_talking_range = false
+func _on_talker_hitbox_manager_body_exited(body: Node2D) -> void:
+	if body.get_parent() is Player:
+		is_within_talking_range = false
