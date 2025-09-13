@@ -263,30 +263,27 @@ position = Vector2(2084, 52)
 position = Vector2(2076, 52)
 
 [node name="TestTileHurt64" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
-position = Vector2(2068, 52)
-
-[node name="TestTileHurt65" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2140, 284)
 
-[node name="TestTileHurt66" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt65" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2148, 284)
 
-[node name="TestTileHurt67" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt66" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2180, 332)
 
-[node name="TestTileHurt68" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt67" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2188, 332)
 
-[node name="TestTileHurt69" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt68" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2196, 332)
 
-[node name="TestTileHurt70" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt69" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2204, 332)
 
-[node name="TestTileHurt71" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt70" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2212, 332)
 
-[node name="TestTileHurt72" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
+[node name="TestTileHurt71" parent="PixelPerfectScreenScaling/SpikeTileset" instance=ExtResource("4_50olh")]
 position = Vector2(2220, 332)
 
 [node name="BaseTileset" parent="PixelPerfectScreenScaling" instance=ExtResource("6_tul53")]
