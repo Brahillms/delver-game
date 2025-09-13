@@ -9,15 +9,15 @@ func _advance(dir: Vector2i) -> void:
 	position_smoothing_enabled = true
 	dir *= Vector2i(256, 192)
 	position += Vector2(dir)
-	
+
 	$Timer.start()
-	
+
 	$PlayerRetriggerBufferT.position += Vector2(9999, 9999)
-	
+
 	await $Timer.timeout
-	
+
 	$PlayerRetriggerBufferT.position -= Vector2(9999, 9999)
-	
+
 	_is_advancing = false
 	position_smoothing_enabled = false
 

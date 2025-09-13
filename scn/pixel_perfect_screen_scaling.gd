@@ -1,11 +1,12 @@
 extends CanvasGroup
 
 
-var _screen_scale_initialized: bool = false
 var scale_factor: int = 1:
 	set(value):
 		scale_factor = value
 		_set_pixel_perfect_size()
+var _screen_scale_initialized: bool = false
+
 
 # Deisgned to expand the game's internal small, fixed resolution for
 # screens with much higher resolutions

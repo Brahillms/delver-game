@@ -9,26 +9,26 @@ const SPEED: float = 80.0
 
 
 func _hurt() -> void:
-	
-	
+
+
 	has_died.emit()
-	
-	
+
+
 	visible = false
-	
-	
+
+
 	has_died.emit()
 	var chance: int = randi() % 999
-	
-	
+
+
 	if chance == 438:
 		$GameOverSFX.play()
-	
-	
+
+
 	$HurtSFX.play()
 	await $HurtSFX.finished
-	
-	
+
+
 	visible = true
 
 

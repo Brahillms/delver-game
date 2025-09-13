@@ -7,8 +7,10 @@ var shut_up: bool = false
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_within_talking_range and not shut_up:
 		shut_up = true
-		await %TextBoxManager.display_textbox(TextBoxManager.Init.OPENING, "player", "talking_looking_left", "This might be the only way in... or out.")
-		await %TextBoxManager.display_textbox(TextBoxManager.Init.CLOSING, "player", "pensive", "Please come home, buddy.")
+		await %TextBoxManager.display_textbox(TextBoxManager.Init.OPENING, "player",
+		"talking_looking_left", "This might be the only way in... or out.")
+		await %TextBoxManager.display_textbox(TextBoxManager.Init.CLOSING, "player", "pensive",
+		"Please come home, buddy.")
 		Global.entered_cave.emit()
 
 

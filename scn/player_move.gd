@@ -9,7 +9,8 @@ var _is_respawning: bool = false
 # I don't know why this works and not just putting %PixelPerfectScreenScaling
 # as there's no way to guaruntee the grandparent node is the CanvasGroup node
 @onready var pixel_perfect = get_node("../..")
-@onready var textbox_manager = get_node("/root/Root/PixelPerfectScreenScaling/WorldCam/TextBoxManager")
+@onready var textbox_manager = get_node(
+	"/root/Root/PixelPerfectScreenScaling/WorldCam/TextBoxManager")
 
 
 func player_jump() -> void:

@@ -1,10 +1,10 @@
 extends ParallaxLayer
 
 
-@onready var pixel_perfect_screen_scaling: CanvasGroup = get_node("../../..")
-
-
 var was_motion_scale: Vector2
+
+
+@onready var pixel_perfect_screen_scaling: CanvasGroup = get_node("../../..")
 
 
 # Called when the node enters the scene tree for the first time.
